@@ -1,6 +1,6 @@
 ﻿namespace JasonsGrocery
 {
-    partial class BossUI
+    partial class EmployeeUI
     {
         /// <summary>
         /// Required designer variable.
@@ -34,14 +34,17 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.uxDataGrid = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.BackButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.uxDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // uxHoursWorked
             // 
-            this.uxHoursWorked.Location = new System.Drawing.Point(239, 23);
+            this.uxHoursWorked.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxHoursWorked.Location = new System.Drawing.Point(131, 30);
+            this.uxHoursWorked.Margin = new System.Windows.Forms.Padding(2);
             this.uxHoursWorked.Name = "uxHoursWorked";
-            this.uxHoursWorked.Size = new System.Drawing.Size(103, 46);
+            this.uxHoursWorked.Size = new System.Drawing.Size(129, 37);
             this.uxHoursWorked.TabIndex = 0;
             this.uxHoursWorked.Text = "HoursWorked";
             this.uxHoursWorked.UseVisualStyleBackColor = true;
@@ -49,61 +52,84 @@
             // 
             // uxClockIn
             // 
-            this.uxClockIn.Location = new System.Drawing.Point(406, 23);
+            this.uxClockIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxClockIn.Location = new System.Drawing.Point(279, 30);
+            this.uxClockIn.Margin = new System.Windows.Forms.Padding(2);
             this.uxClockIn.Name = "uxClockIn";
-            this.uxClockIn.Size = new System.Drawing.Size(103, 49);
+            this.uxClockIn.Size = new System.Drawing.Size(77, 37);
             this.uxClockIn.TabIndex = 1;
             this.uxClockIn.Text = "ClockIn";
             this.uxClockIn.UseVisualStyleBackColor = true;
             // 
             // uxClockOut
             // 
-            this.uxClockOut.Location = new System.Drawing.Point(575, 23);
+            this.uxClockOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxClockOut.Location = new System.Drawing.Point(375, 30);
+            this.uxClockOut.Margin = new System.Windows.Forms.Padding(2);
             this.uxClockOut.Name = "uxClockOut";
-            this.uxClockOut.Size = new System.Drawing.Size(103, 49);
+            this.uxClockOut.Size = new System.Drawing.Size(94, 37);
             this.uxClockOut.TabIndex = 2;
             this.uxClockOut.Text = "ClockOut";
             this.uxClockOut.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 36);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(12, 41);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(83, 22);
+            this.textBox1.Size = new System.Drawing.Size(95, 26);
             this.textBox1.TabIndex = 4;
             // 
             // uxDataGrid
             // 
             this.uxDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uxDataGrid.Location = new System.Drawing.Point(48, 127);
+            this.uxDataGrid.Location = new System.Drawing.Point(14, 81);
+            this.uxDataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.uxDataGrid.Name = "uxDataGrid";
             this.uxDataGrid.RowHeadersWidth = 51;
             this.uxDataGrid.RowTemplate.Height = 24;
-            this.uxDataGrid.Size = new System.Drawing.Size(671, 257);
+            this.uxDataGrid.Size = new System.Drawing.Size(506, 223);
             this.uxDataGrid.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 13);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 17);
+            this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "EmployeeID";
+            this.label1.Text = "EmployeeID:";
             // 
-            // BossUI
+            // BackButton
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.Location = new System.Drawing.Point(12, 324);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 32);
+            this.BackButton.TabIndex = 7;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // EmployeeUI
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(531, 366);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uxDataGrid);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.uxClockOut);
             this.Controls.Add(this.uxClockIn);
             this.Controls.Add(this.uxHoursWorked);
-            this.Name = "BossUI";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "EmployeeUI";
             this.Text = "BossUI";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmployeeUI_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.uxDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -118,5 +144,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView uxDataGrid;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BackButton;
     }
 }

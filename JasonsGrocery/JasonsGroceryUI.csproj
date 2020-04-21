@@ -46,18 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BigJ%27sUI.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.cs">
-      <DependentUpon>BigJ%27sUI.cs</DependentUpon>
+      <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BossUI.cs">
+    <Compile Include="EmployeeUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BossUI.Designer.cs">
-      <DependentUpon>BossUI.cs</DependentUpon>
+    <Compile Include="EmployeeUI.Designer.cs">
+      <DependentUpon>EmployeeUI.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerUI.cs">
       <SubType>Form</SubType>
@@ -67,11 +67,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BigJ%27sUI.resx">
-      <DependentUpon>BigJ%27sUI.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BossUI.resx">
-      <DependentUpon>BossUI.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeUI.resx">
+      <DependentUpon>EmployeeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerUI.resx">
+      <DependentUpon>ManagerUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
