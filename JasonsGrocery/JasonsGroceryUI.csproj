@@ -59,6 +59,12 @@
     <Compile Include="EmployeeUI.Designer.cs">
       <DependentUpon>EmployeeUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerBaseForm.Designer.cs">
+      <DependentUpon>ManagerBaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeUI.resx">
       <DependentUpon>EmployeeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerBaseForm.resx">
+      <DependentUpon>ManagerBaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerUI.resx">
       <DependentUpon>ManagerUI.cs</DependentUpon>
