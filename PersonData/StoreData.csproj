@@ -96,7 +96,7 @@
     <EmbeddedResource Include="Sql\Procedures\Stores.Top10Products.sql" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Sql\Procedures\Stores.MostHourWorked.sql" />
+    <EmbeddedResource Include="Sql\Procedures\Stores.HoursWorked.sql" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Sql\Procedures\Person.FetchPerson.sql" />
