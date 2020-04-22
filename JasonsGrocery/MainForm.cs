@@ -13,11 +13,11 @@ namespace JasonsGrocery
     public partial class MainForm : Form
     {
         private EmployeeUI employee;
-        private ManagerUI manager;
+        private uxProductQueryUI manager;
         public MainForm()
         {
             InitializeComponent();
-            manager = new ManagerUI(this);
+            manager = new uxProductQueryUI(this);
             employee = new EmployeeUI(this);
         }
 

@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace JasonsGrocery
 {
-    public partial class ManagerUI : Form
+    public partial class uxProductQueryUI : Form
     {
         private MainForm mainForm;
         public bool open;
-        public ManagerUI(MainForm f)
+        public uxProductQueryUI(MainForm f)
         {
             InitializeComponent();
             mainForm = f;
