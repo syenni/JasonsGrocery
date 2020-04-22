@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace JasonsGrocery
 {
@@ -21,9 +23,20 @@ namespace JasonsGrocery
             open = true;
         }
 
+        //HoursWorkedButton
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            string connectionString = @"Data Source = (localdb)\MSSQLLocalDb; Initial Catalog = bhartman; Integrated Security = True;";
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            {
+                string script = File.ReadAllText(@"JasonsGrocery\PersonData\Sql\Procedures\Person.FetchPerson");
+                sqlConnection.Open();
+                SqlDataAdapter sqlData = new SqlDataAdapter(script, sqlConnection);
+                DataTable dataTable = new DataTable();
+                sqlData.Fill(dataTable);
+                uxDataGrid.DataSource = dataTable;
+            }
+            
         }
 
         private void BackButton_Click(object sender, EventArgs e)
