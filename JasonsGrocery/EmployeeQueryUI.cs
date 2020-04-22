@@ -10,18 +10,19 @@ using System.Windows.Forms;
 
 namespace JasonsGrocery
 {
-    public partial class SalesQueryUI : Form
+    public partial class EmployeeQueryUI : Form
     {
         private ManagerBaseForm baseForm;
         public bool open;
-        public SalesQueryUI(ManagerBaseForm f)
+
+        public EmployeeQueryUI(ManagerBaseForm f)
         {
             InitializeComponent();
             baseForm = f;
             open = true;
         }
 
-        private void SalesQueryUI_FormClosed(object sender, FormClosedEventArgs e)
+        private void EmployeeQueryUI_FormClosed(object sender, FormClosedEventArgs e)
         {
             open = false;
             baseForm.Close();

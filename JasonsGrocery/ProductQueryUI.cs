@@ -12,19 +12,18 @@ namespace JasonsGrocery
 {
     public partial class uxProductQueryUI : Form
     {
-        private MainForm mainForm;
+        private ManagerBaseForm baseForm;
         public bool open;
-        public uxProductQueryUI(MainForm f)
+        public uxProductQueryUI(ManagerBaseForm f)
         {
             InitializeComponent();
-            mainForm = f;
-            open = true;
+            baseForm = f;
         }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mainForm.Show();
+            baseForm.Show();
         }
         
         public void UncheckRadioButtons(RadioButton r)
@@ -70,7 +69,7 @@ namespace JasonsGrocery
         private void ManagerUI_FormClosed(object sender, FormClosedEventArgs e)
         {
             open = false;
-            mainForm.Close();
+            baseForm.Close();
         }
     }
 }

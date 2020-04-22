@@ -24,7 +24,7 @@ namespace JasonsGrocery
         private void LogInButton_Click(object sender, EventArgs e)
         {
             if (passcode.Equals(PasscodeIDTextbox.Text)) {
-                ManagerBaseForm m = new ManagerBaseForm();
+                ManagerBaseForm m = new ManagerBaseForm(this);
                 m.Show();
                 this.Hide();
             }

@@ -36,7 +36,6 @@ namespace JasonsGrocery
                 sqlData.Fill(dataTable);
                 uxDataGrid.DataSource = dataTable;
             }
-            
         }
 
         private void BackButton_Click(object sender, EventArgs e)
