@@ -31,7 +31,7 @@
             this.uxHoursWorked = new System.Windows.Forms.Button();
             this.uxClockIn = new System.Windows.Forms.Button();
             this.uxClockOut = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.EmployeeIdTextBox = new System.Windows.Forms.TextBox();
             this.uxDataGrid = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.BackButton = new System.Windows.Forms.Button();
@@ -72,14 +72,14 @@
             this.uxClockOut.Text = "ClockOut";
             this.uxClockOut.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // EmployeeIdTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 41);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(95, 26);
-            this.textBox1.TabIndex = 4;
+            this.EmployeeIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeIdTextBox.Location = new System.Drawing.Point(12, 41);
+            this.EmployeeIdTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.EmployeeIdTextBox.Name = "EmployeeIdTextBox";
+            this.EmployeeIdTextBox.Size = new System.Drawing.Size(95, 26);
+            this.EmployeeIdTextBox.TabIndex = 4;
             // 
             // uxDataGrid
             // 
@@ -122,7 +122,7 @@
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uxDataGrid);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.EmployeeIdTextBox);
             this.Controls.Add(this.uxClockOut);
             this.Controls.Add(this.uxClockIn);
             this.Controls.Add(this.uxHoursWorked);
@@ -141,7 +141,7 @@
         private System.Windows.Forms.Button uxHoursWorked;
         private System.Windows.Forms.Button uxClockIn;
         private System.Windows.Forms.Button uxClockOut;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox EmployeeIdTextBox;
         private System.Windows.Forms.DataGridView uxDataGrid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BackButton;

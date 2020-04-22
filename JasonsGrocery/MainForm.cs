@@ -13,36 +13,29 @@ namespace JasonsGrocery
     public partial class MainForm : Form
     {
         private EmployeeUI employee;
-        private ManagerUI manager;
+        private PasscodeUI passcode;
         public MainForm()
         {
             InitializeComponent();
-            manager = new ManagerUI(this);
-            employee = new EmployeeUI(this);
         }
 
         private void MangerButton_Click(object sender, EventArgs e)
         {
-            manager.Show();
+            passcode = new PasscodeUI(this);
+            passcode.Show();
             this.Hide();
         }
 
         private void EmployeeButton_Click(object sender, EventArgs e)
         {
+            employee = new EmployeeUI(this);
             employee.Show();
             this.Hide();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if(manager.open == true)
-            {
-                manager.Close();
-            }
-            if (employee.open == true)
-            {
-                employee.Close();
-            }
+            
         }
     }
 }
