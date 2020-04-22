@@ -41,7 +41,7 @@ namespace PersonData
 
       public IReadOnlyList<Address> RetrieveAdresses(int personId)
       {
-         var d = new RetrieveAddressesForPersonDataDelegate(personId);
+         var d = new RetrieveProductsForDepartmentDataDelegate(personId);
          return executor.ExecuteReader(d);
       }
    }
