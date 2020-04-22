@@ -29,7 +29,7 @@ namespace JasonsGrocery
             string connectionString = @"Data Source = (localdb)\MSSQLLocalDb; Initial Catalog = bhartman; Integrated Security = True;";
             using (SqlConnection sqlConnection = new SqlConnection(connectionString))
             {
-                string script = File.ReadAllText(@"JasonsGrocery\PersonData\Sql\Procedures\Person.FetchPerson");
+                string script = File.ReadAllText(@"JasonsGrocery\PersonData\Sql\Procedures\Stores.HoursWorked");
                 sqlConnection.Open();
                 SqlDataAdapter sqlData = new SqlDataAdapter(script, sqlConnection);
                 DataTable dataTable = new DataTable();
