@@ -71,11 +71,11 @@
     <Compile Include="ManagerBaseForm.Designer.cs">
       <DependentUpon>ManagerBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagerUI.cs">
+    <Compile Include="ProductQueryUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagerUI.Designer.cs">
-      <DependentUpon>ManagerUI.cs</DependentUpon>
+    <Compile Include="ProductQueryUI.Designer.cs">
+      <DependentUpon>ProductQueryUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,8 +97,8 @@
     <EmbeddedResource Include="ManagerBaseForm.resx">
       <DependentUpon>ManagerBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagerUI.resx">
-      <DependentUpon>ManagerUI.cs</DependentUpon>
+    <EmbeddedResource Include="ProductQueryUI.resx">
+      <DependentUpon>ProductQueryUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
