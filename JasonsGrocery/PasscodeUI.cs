@@ -13,7 +13,7 @@ namespace JasonsGrocery
     public partial class PasscodeUI : Form
     {
         MainForm form;
-        private string passcode = "42069";
+        private string passcode = "1234";
 
         public PasscodeUI(MainForm f)
         {
