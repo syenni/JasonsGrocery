@@ -11,7 +11,7 @@ END;
 /****************************
  * Unique Constraints
  ****************************/
-
+/*
 IF NOT EXISTS
    (
       SELECT *
@@ -26,11 +26,11 @@ BEGIN
       Email ASC
    )
 END;
-
+*/
 /****************************
  * Check Constraints
  ****************************/
-
+/*
 IF NOT EXISTS
    (
       SELECT *
@@ -44,4 +44,4 @@ BEGIN
    (
       FirstName > N'' OR LastName > N''
    )
-END;
+END;*/
