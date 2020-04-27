@@ -22,7 +22,7 @@ namespace WorkPositionData.DataDelegates
                reader.GetInt32("WorkPositionID"),
                reader.GetValue<double>("HourlyPay"),
                reader.GetString("WorkPositionName"),
-               reader.GetValue<WorkPositionType>("WorkPositionType"));
+               reader.GetValue<WorkPositionType>("WorkPositionType")));
             }
 
          return WorkPositions;

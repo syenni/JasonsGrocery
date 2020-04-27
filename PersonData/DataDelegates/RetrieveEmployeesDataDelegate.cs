@@ -18,12 +18,12 @@ namespace EmployeeData.DataDelegates
 
          while (reader.Read())
          {
-            Employees.Add(new Employee(
-               reader.GetInt32("EmployeeID"),
-               reader.GetValue<DepartmentType>("DepartmentType"),
-               reader.GetValue<WorkPositionType>("WorkPositionType"),
-               reader.GetString("EmployeeName"),
-               reader.GetDateTimeOffset("DateTime").DateTime)
+                Employees.Add(new Employee(
+                   reader.GetInt32("EmployeeID"),
+                   reader.GetValue<DepartmentType>("DepartmentType"),
+                   reader.GetValue<WorkPositionType>("WorkPositionType"),
+                   reader.GetString("EmployeeName"),
+                   reader.GetDateTimeOffset("DateTime").DateTime));
             }
 
          return Employees;
