@@ -11,7 +11,7 @@ namespace DepartmentData
       /// <returns>
       /// <see cref="IReadOnlyList{Department}"/> containing all Departments.
       /// </returns>
-      IReadOnlyList<Store> RetrieveDepartments();
+      IReadOnlyList<Department> RetrieveDepartments();
 
       /// <summary>
       /// Fetches the Department with the given <paramref name="DepartmentId"/> if it exists.
@@ -23,7 +23,7 @@ namespace DepartmentData
       /// <exception cref="DataAccess.RecordNotFoundException">
       /// Thrown if <paramref name="DepartmentId"/> does not exist.
       /// </exception>
-      Store FetchDepartment(int DepartmentID);
+      Department FetchDepartment(int DepartmentID);
 
       /// <summary>
       /// Gets the Department with the given <paramref name="DepartmentId"/> if it exists.
@@ -34,7 +34,7 @@ namespace DepartmentData
       /// if one exists with with the provided <paramref name="email"/>.
       /// If one is not found, <c>null</c> is returned.
       /// </returns>
-      Store GetDepartment(string DepartmentName);
+      Department GetDepartment(string DepartmentName);
 
       /// <summary>
       /// Creates a new Department in the repository.
@@ -45,6 +45,7 @@ namespace DepartmentData
       /// <returns>
       /// The resulting instance of <see cref="Department"/>.
       /// </returns>
-      Store CreateDepartment(string DepartmentName);
+      /// 
+      //Store CreateDepartment(string DepartmentName);
    }
 }

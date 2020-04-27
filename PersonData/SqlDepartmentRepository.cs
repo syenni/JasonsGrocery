@@ -15,20 +15,20 @@ namespace DepartmentData
          executor = new SqlCommandExecutor(connectionString);
       }
 
-      public Department CreateDepartment(string firstName, string lastName, string email)
-      {
-         if (string.IsNullOrWhiteSpace(firstName))
-            throw new ArgumentException("The parameter cannot be null or empty.", nameof(firstName));
+      //public Department CreateDepartment(string firstName, string lastName, string email)
+      //{
+      //   if (string.IsNullOrWhiteSpace(firstName))
+      //      throw new ArgumentException("The parameter cannot be null or empty.", nameof(firstName));
 
-         if (string.IsNullOrWhiteSpace(lastName))
-            throw new ArgumentException("The parameter cannot be null or empty.", nameof(lastName));
+      //   if (string.IsNullOrWhiteSpace(lastName))
+      //      throw new ArgumentException("The parameter cannot be null or empty.", nameof(lastName));
 
-         if (string.IsNullOrWhiteSpace(email))
-            throw new ArgumentException("The parameter cannot be null or empty.", nameof(email));
+      //   if (string.IsNullOrWhiteSpace(email))
+      //      throw new ArgumentException("The parameter cannot be null or empty.", nameof(email));
 
-         var d = new CreateDepartmentDataDelegate(DepartmentID, StoreID, DepartmentName);
-         return executor.ExecuteNonQuery(d);
-      }
+      //   var d = new CreateDepartmentDataDelegate(DepartmentID, StoreID, DepartmentName);
+      //   return executor.ExecuteNonQuery(d);
+      //}
 
       public Department FetchDepartment(int DepartmentId)
       {
@@ -36,9 +36,9 @@ namespace DepartmentData
          return executor.ExecuteReader(d);
       }
 
-      public Department GetDepartment(string email)
+      public Department GetDepartment(string DepartmentName)
       {
-         var d = new GetDepartmentDataDelegate(email);
+         var d = new GetDepartmentDataDelegate(DepartmentName);
          return executor.ExecuteReader(d);
       }
 
