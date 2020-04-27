@@ -11,7 +11,7 @@ namespace EmployeeData
       /// <returns>
       /// <see cref="IReadOnlyList{Employee}"/> containing all Employees.
       /// </returns>
-      IReadOnlyList<Store> RetrieveEmployees();
+      IReadOnlyList<Employee> RetrieveEmployees();
 
       /// <summary>
       /// Fetches the Employee with the given <paramref name="EmployeeId"/> if it exists.
@@ -23,7 +23,7 @@ namespace EmployeeData
       /// <exception cref="DataAccess.RecordNotFoundException">
       /// Thrown if <paramref name="EmployeeId"/> does not exist.
       /// </exception>
-      Store FetchEmployee(int EmployeeID);
+      Employee FetchEmployee(int EmployeeID);
 
       /// <summary>
       /// Gets the Employee with the given <paramref name="EmployeeId"/> if it exists.
@@ -34,7 +34,7 @@ namespace EmployeeData
       /// if one exists with with the provided <paramref name="email"/>.
       /// If one is not found, <c>null</c> is returned.
       /// </returns>
-      Store GetEmployee(string EmployeeName);
+      Employee GetEmployee(string EmployeeName);
 
       /// <summary>
       /// Creates a new Employee in the repository.
@@ -45,6 +45,6 @@ namespace EmployeeData
       /// <returns>
       /// The resulting instance of <see cref="Employee"/>.
       /// </returns>
-      Store CreateEmployee(string EmployeeName);
+     // Employee CreateEmployee(string EmployeeName);
    }
 }
