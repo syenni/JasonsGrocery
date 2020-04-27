@@ -33,6 +33,6 @@ namespace DepartmentData.DataDelegates
                reader.GetValue<DepartmentType>("DepartmentType"),
                reader.GetInt32("StoreID"),
                reader.GetString("DepartmentName"));
-        }
+      }
    }
 }

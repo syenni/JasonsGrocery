@@ -6,19 +6,19 @@ namespace DepartmentData.DataDelegates
 {
    internal class GetDepartmentDataDelegate : DataReaderDelegate<Department>
    {
-      private readonly string email;
+      private readonly string departmentName;
 
-      public GetDepartmentDataDelegate(string email)
+      public GetDepartmentDataDelegate(string departmentName)
          : base("Department.GetDepartment")
       {
-         this.email = email;
+         this.departmentName = departmentName;
       }
 
       public override void PrepareCommand(SqlCommand command)
       {
          base.PrepareCommand(command);
 
-         command.Parameters.AddWithValue("Email", email);
+         command.Parameters.AddWithValue("DepartmentName", departmentName);
       }
 
       public override Department Translate(SqlCommand command, IDataRowReader reader)
@@ -30,7 +30,7 @@ namespace DepartmentData.DataDelegates
                reader.GetInt32("DepartmentID"),
                reader.GetValue<DepartmentType>("DepartmentType"),
                reader.GetInt32("StoreID"),
-               reader.GetString("DepartmentName"));
+               departmentName); //reader.GetString("DepartmentName"));
       }
    }
 }

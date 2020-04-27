@@ -8,20 +8,20 @@ namespace DepartmentData.DataDelegates
 {
    internal class RetrieveProductsForDepartmentDataDelegate : DataReaderDelegate<IReadOnlyList<Product>>
    {
-      private readonly int DepartmentID;
+      private readonly int ProductID;
 
-      public RetrieveProductsForDepartmentDataDelegate(int DepartmentID)
+      public RetrieveProductsForDepartmentDataDelegate(int ProductID)
          : base("Department.RetrieveProductesForDepartment")
       {
-         this.DepartmentID = DepartmentID;
+         this.ProductID = ProductID;
       }
 
       public override void PrepareCommand(SqlCommand command)
       {
          base.PrepareCommand(command);
 
-         var p = command.Parameters.Add("DepartmentID", SqlDbType.Int);
-         p.Value = DepartmentID;
+         var p = command.Parameters.Add("ProductID", SqlDbType.Int);
+         p.Value = ProductID;
       }
       public override IReadOnlyList<Product> Translate(SqlCommand command, IDataRowReader reader)
       {
@@ -30,10 +30,9 @@ namespace DepartmentData.DataDelegates
          while (reader.Read())
          {
             Products.Add(new Product(
-               reader.GetInt32("ProductID"),
+               ProductID,
                reader.GetInt32("StoreID"),
                reader.GetValue<DepartmentType>("DepartmentType"),
-              // (ProductType)reader.GetByte("ProductTypeId"),
                reader.GetValue<double>("UnitPrice"),
                reader.GetInt32("StockQuantity"),
                reader.GetString("ProductName")));

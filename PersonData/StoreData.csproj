@@ -42,7 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataDelegates\CreateProductDadaDelegate.cs" />
     <Compile Include="DataDelegates\FetchDepartmentDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchProductDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetProductDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveDepartmentsDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveProductsForDepartmentDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrievePersonsDataDelegate.cs" />
@@ -68,6 +71,7 @@
     <Compile Include="SqlDepartmentRepository.cs" />
     <Compile Include="SqlPersonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlProductRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Sql\Tables\DropTables.sql" />
