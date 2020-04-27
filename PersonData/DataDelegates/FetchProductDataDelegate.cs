@@ -5,8 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccess;
-using StoreData.Models;
 using System.Data;
 using System.Data.SqlClient;
 using System.Net.Http.Headers;

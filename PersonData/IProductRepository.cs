@@ -11,7 +11,7 @@ namespace ProductData
       /// <returns>
       /// <see cref="IReadOnlyList{Product}"/> containing all Products.
       /// </returns>
-      IReadOnlyList<Store> RetrieveProducts();
+      IReadOnlyList<Product> RetrieveProducts(int productID);
 
       /// <summary>
       /// Fetches the Product with the given <paramref name="ProductId"/> if it exists.
@@ -23,7 +23,7 @@ namespace ProductData
       /// <exception cref="DataAccess.RecordNotFoundException">
       /// Thrown if <paramref name="ProductId"/> does not exist.
       /// </exception>
-      Store FetchProduct(int ProductID);
+      Product FetchProduct(int ProductID);
 
       /// <summary>
       /// Gets the Product with the given <paramref name="ProductId"/> if it exists.
@@ -34,7 +34,7 @@ namespace ProductData
       /// if one exists with with the provided <paramref name="email"/>.
       /// If one is not found, <c>null</c> is returned.
       /// </returns>
-      Store GetProduct(string ProductName);
+      Product GetProduct(string ProductName);
 
       /// <summary>
       /// Creates a new Product in the repository.
@@ -45,6 +45,6 @@ namespace ProductData
       /// <returns>
       /// The resulting instance of <see cref="Product"/>.
       /// </returns>
-      Store CreateProduct(string ProductName);
+      //Store CreateProduct(string ProductName);
    }
 }

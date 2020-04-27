@@ -50,7 +50,7 @@ namespace PersonData.DataDelegates
         public override Product Translate(SqlCommand command)
         {
             //return new Product((int)command.Parameters["DepartmentId"].Value, departmentName);
-            return new Product((int)command.Parameters["ProductId"].Value, storeID, departmentType, unitPrice, stockQuantity, productName) //(int)command.Parameters["StoreId"].Value
+            return new Product((int)command.Parameters["ProductId"].Value, storeID, departmentType, unitPrice, stockQuantity, productName); //(int)command.Parameters["StoreId"].Value
         }
 
         public override Product Translate(SqlCommand command, IDataRowReader reader)

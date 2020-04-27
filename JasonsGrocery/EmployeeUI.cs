@@ -27,7 +27,7 @@ namespace JasonsGrocery
         //Data readers
         private void Button1_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source = (localdb)\MSSQLLocalDb; Initial Catalog = bhartman; Integrated Security = True;";
+            /*string connectionString = @"Data Source = (localdb)\MSSQLLocalDb; Initial Catalog = bhartman; Integrated Security = True;";
             using (SqlConnection sqlConnection = new SqlConnection(connectionString))
             {
                 string script = @"Stores.HoursWorked";
@@ -44,6 +44,7 @@ namespace JasonsGrocery
             var employeeRepo = new employeeRepo(connectionString);
             var hoursWorked = employeeRepo.GetHoursWorked(EmployeeIdTextBox.Value); //convert value
             //loop through hours worked
+            */
         }
 
 

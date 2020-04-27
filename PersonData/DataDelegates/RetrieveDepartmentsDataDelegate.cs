@@ -20,6 +20,7 @@ namespace DepartmentData.DataDelegates
          {
             Departments.Add(new Department(
                reader.GetInt32("DepartmentID"),
+               reader.GetValue<DepartmentType>("DepartmentType"),
                reader.GetInt32("StoreID"),
                reader.GetString("DepartmentName")));
          }

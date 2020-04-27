@@ -3,6 +3,8 @@ using DataAccess;
 using StoreData.Models;
 using DepartmentData.DataDelegates;
 using System;
+using ProductData;
+using PersonData.DataDelegates;
 
 namespace DepartmentData
 {
@@ -30,21 +32,23 @@ namespace DepartmentData
         //   return executor.ExecuteNonQuery(d);
         //}
 
-        public Store FetchProduct(int ProductID)
+        public Product FetchProduct(int ProductID)
         {
-            var d = new FetchProductDataDelegate(ProdutID);
+            var d = new FetchProductDataDelegate(ProductID);
             return executor.ExecuteReader(d);
         }
 
-        public Store GetProduct(string ProductName)
+        public Product GetProduct(string ProductName)
         {
             var d = new GetProductDataDelegate(ProductName);
             return executor.ExecuteReader(d);
         }
 
-        public IReadOnlyList<Store> RetrieveProductss()
+        public IReadOnlyList<Product> RetrieveProducts(int productID)
         {
-            return executor.ExecuteReader(new RetrieveDepartmentsDataDelegate());
+            //return executor.ExecuteReader(new RetrieveProductsForDepartmentDataDelegate(ProductID);
+            var d = new RetrieveProductsForDepartmentDataDelegate(productID);
+            return executor.ExecuteReader(d);
         }
     }
 }

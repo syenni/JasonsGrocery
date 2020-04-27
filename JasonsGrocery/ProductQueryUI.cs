@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DepartmentData;
+using ProductData;
 
 namespace JasonsGrocery
 {
@@ -14,6 +16,10 @@ namespace JasonsGrocery
     {
         private ManagerBaseForm baseForm;
         public bool open;
+        const string connectionString = @"Server=Seth-PC\SQLEXPRESS;Database=JasonsGrocery;User Id=Ryan;Password=1781;"; //Integrated Security=SSPI;
+        private IProductRepository repo;
+        
+
         public uxProductQueryUI(ManagerBaseForm f)
         {
             InitializeComponent();
@@ -74,7 +80,10 @@ namespace JasonsGrocery
 
         private void UxCheckItemStock_Click(object sender, EventArgs e)
         {
-            if (DairyRadioButton.Checked)
+            repo = new SqlProductRepository(connectionString);
+            uxdataGridView.DataSource = repo.RetrieveProducts(2); //Test to retrieve the productID 2
+            
+            /*if (DairyRadioButton.Checked)
             {
                 uxdataGridView.DataSource = RetrieveProductsForDepartmentDataDelegate;
             }
@@ -89,7 +98,7 @@ namespace JasonsGrocery
             else if (BakeryRadioButton.Checked)
             {
                 uxdataGridView.DataSource = RetrieveProductsForDepartmentDataDelegate;
-            }
+            }*/
         }
     }
 }
