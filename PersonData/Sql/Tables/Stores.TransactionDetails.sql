@@ -19,7 +19,7 @@ END
 /****************************
  * Unique Constraints
  ****************************/
-
+/*
 IF NOT EXISTS
    (
       SELECT *
@@ -34,12 +34,12 @@ BEGIN
       PersonId,
       AddressTypeId
    )
-END;
+END;*/
 
 /****************************
  * Foreign Keys Constraints
  ****************************/
-
+/*
 IF NOT EXISTS
    (
       SELECT *
@@ -78,4 +78,4 @@ BEGIN
    (
       AddressTypeId
    );
-END;
+END;*/

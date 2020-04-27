@@ -16,7 +16,7 @@ END;
 /****************************
  * Unique Constraints
  ****************************/
-
+/*
 IF NOT EXISTS
    (
       SELECT *
@@ -30,4 +30,4 @@ BEGIN
    (
       Email ASC
    )
-END;
+END;*/
