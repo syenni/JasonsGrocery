@@ -1,5 +1,5 @@
 ﻿using DataAccess;
-using PersonData.Models;
+using StoreData.Models;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 

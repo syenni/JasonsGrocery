@@ -4,3 +4,9 @@ C:\Users\bhartman24\Downloads\DataAccessDemo2\DataAccessDemo2\DataAccess\obj\Deb
 C:\Users\bhartman24\Downloads\DataAccessDemo2\DataAccessDemo2\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\bhartman24\Downloads\DataAccessDemo2\DataAccessDemo2\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\bhartman24\Downloads\DataAccessDemo2\DataAccessDemo2\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\bhartman24\Documents\JasonsGrocery\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\bhartman24\Documents\JasonsGrocery\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\bhartman24\Documents\JasonsGrocery\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\bhartman24\Documents\JasonsGrocery\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\bhartman24\Documents\JasonsGrocery\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\bhartman24\Documents\JasonsGrocery\DataAccess\obj\Debug\DataAccess.pdb

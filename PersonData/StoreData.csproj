@@ -42,10 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="DataDelegates\CreateProductDadaDelegate.cs" />
     <Compile Include="DataDelegates\FetchDepartmentDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchProductDataDelegate.cs" />
     <Compile Include="DataDelegates\GetProductDataDelegate.cs" />
+=======
+    <Compile Include="DataDelegates\FetchWorkPositionDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchEmployeeDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchDepartmentDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetWorkPositionDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetEmployeeDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrieveWorkPositionsDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrieveEmployeesDataDelegate.cs" />
+>>>>>>> 05b83c05e9088f16fc4cbc57b2de4a8c46e49642
     <Compile Include="DataDelegates\RetrieveDepartmentsDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveProductsForDepartmentDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrievePersonsDataDelegate.cs" />
@@ -68,6 +78,8 @@
     <Compile Include="Models\WorkPosition.cs" />
     <Compile Include="Models\WorkPositionType.cs" />
     <Compile Include="SqlAddressRepository.cs" />
+    <Compile Include="SqlWorkPositionRepository.cs" />
+    <Compile Include="SqlEmployeeRepository.cs" />
     <Compile Include="SqlDepartmentRepository.cs" />
     <Compile Include="SqlPersonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

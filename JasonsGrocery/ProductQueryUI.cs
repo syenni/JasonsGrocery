@@ -71,5 +71,25 @@ namespace JasonsGrocery
             open = false;
             baseForm.Close();
         }
+
+        private void UxCheckItemStock_Click(object sender, EventArgs e)
+        {
+            if (DairyRadioButton.Checked)
+            {
+                uxdataGridView.DataSource = RetrieveProductsForDepartmentDataDelegate;
+            }
+            else if (DeliRadioButton.Checked)
+            {
+                uxdataGridView.DataSource = RetrieveProductsForDepartmentDataDelegate;
+            }
+            else if (ProduceRadioButton.Checked)
+            {
+                uxdataGridView.DataSource = RetrieveProductsForDepartmentDataDelegate;
+            }
+            else if (BakeryRadioButton.Checked)
+            {
+                uxdataGridView.DataSource = RetrieveProductsForDepartmentDataDelegate;
+            }
+        }
     }
 }
