@@ -42,9 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataDelegates\FetchWorkPositionDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchEmployeeDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchDepartmentDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetWorkPositionDataDelegate.cs" />
     <Compile Include="DataDelegates\GetEmployeeDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrieveWorkPositionsDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveEmployeesDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveDepartmentsDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveProductsForDepartmentDataDelegate.cs" />
@@ -68,6 +71,7 @@
     <Compile Include="Models\WorkPosition.cs" />
     <Compile Include="Models\WorkPositionType.cs" />
     <Compile Include="SqlAddressRepository.cs" />
+    <Compile Include="SqlWorkPositionRepository.cs" />
     <Compile Include="SqlEmployeeRepository.cs" />
     <Compile Include="SqlDepartmentRepository.cs" />
     <Compile Include="SqlPersonRepository.cs" />

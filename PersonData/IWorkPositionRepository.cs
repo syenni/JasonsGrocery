@@ -11,7 +11,7 @@ namespace WorkPositionData
       /// <returns>
       /// <see cref="IReadOnlyList{WorkPosition}"/> containing all WorkPositions.
       /// </returns>
-      IReadOnlyList<Store> RetrieveWorkPositions();
+      IReadOnlyList<WorkPosition> RetrieveWorkPositions();
 
       /// <summary>
       /// Fetches the WorkPosition with the given <paramref name="WorkPositionId"/> if it exists.
@@ -23,7 +23,7 @@ namespace WorkPositionData
       /// <exception cref="DataAccess.RecordNotFoundException">
       /// Thrown if <paramref name="WorkPositionId"/> does not exist.
       /// </exception>
-      Store FetchWorkPosition(int WorkPositionID);
+      WorkPosition FetchWorkPosition(int WorkPositionID);
 
       /// <summary>
       /// Gets the WorkPosition with the given <paramref name="WorkPositionId"/> if it exists.
@@ -34,7 +34,7 @@ namespace WorkPositionData
       /// if one exists with with the provided <paramref name="email"/>.
       /// If one is not found, <c>null</c> is returned.
       /// </returns>
-      Store GetWorkPosition(string WorkPositionName);
+      WorkPosition GetWorkPosition(string WorkPositionName);
 
       /// <summary>
       /// Creates a new WorkPosition in the repository.
@@ -45,6 +45,6 @@ namespace WorkPositionData
       /// <returns>
       /// The resulting instance of <see cref="WorkPosition"/>.
       /// </returns>
-      Store CreateWorkPosition(string WorkPositionName);
+      //WorkPosition CreateWorkPosition(string WorkPositionName);
    }
 }
