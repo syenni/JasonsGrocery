@@ -43,12 +43,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataDelegates\FetchDepartmentDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrieveDepartmentsDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveProductsForDepartmentDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrievePersonsDataDelegate.cs" />
     <Compile Include="DataDelegates\GetDepartmentDataDelegate.cs" />
     <Compile Include="DataDelegates\CreateDepartmentDataDelegate.cs" />
     <Compile Include="IAddressRepository.cs" />
     <Compile Include="IDepartmentRepository.cs" />
+    <Compile Include="IEmployeeRepository.cs" />
+    <Compile Include="IProductRepository.cs" />
+    <Compile Include="IWorkPositionRepository.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\DepartmentType.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -61,6 +65,7 @@
     <Compile Include="Models\WorkPosition.cs" />
     <Compile Include="Models\WorkPositionType.cs" />
     <Compile Include="SqlAddressRepository.cs" />
+    <Compile Include="SqlDepartmentRepository.cs" />
     <Compile Include="SqlPersonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

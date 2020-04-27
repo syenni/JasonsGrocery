@@ -1,5 +1,5 @@
 ﻿--4R: list of employees who worked most hours in specific month
-CREATE OR ALTER PROCEDURE Stores.ItemsUnderCertainPrice
+CREATE OR ALTER PROCEDURE Stores.HoursWorked
    @EmployeeID INT,
    @Month DATETIME
 AS
