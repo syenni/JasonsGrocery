@@ -3,7 +3,6 @@ BEGIN
    CREATE TABLE Stores.WorkPosition
 	(
 		WorkPositionID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-		HourlyPay FLOAT NOT NULL,
 		PositionName NVARCHAR(32) NOT NULL UNIQUE
 	);
 END;

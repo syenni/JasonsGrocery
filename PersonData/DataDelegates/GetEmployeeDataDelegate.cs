@@ -28,10 +28,8 @@ namespace EmployeeData.DataDelegates
 
             return new Employee(
                reader.GetInt32("EmployeeID"),
-               reader.GetValue<DepartmentType>("DepartmentType"),
-               reader.GetValue<WorkPositionType>("WorkPositionType"),
                employeeName,
-               reader.GetDateTimeOffset("DateTime").DateTime);
+               reader.GetString("PositionName"));
         }
    }
 }

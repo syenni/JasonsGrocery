@@ -39,5 +39,11 @@ namespace StoreData.Models
             this.StockQuantity = quantity;
             this.ProductName = productName;
         }
+
+        public Product(int quantity, string productName)
+        {
+            this.StockQuantity = quantity;
+            this.ProductName = productName;
+        }
     }
 }

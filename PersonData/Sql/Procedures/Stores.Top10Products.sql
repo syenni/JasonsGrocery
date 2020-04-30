@@ -1,18 +1,19 @@
 ﻿--2R: top 10 products
 CREATE OR ALTER PROCEDURE Stores.Top10Products
-   @DepartmentName NVARCHAR(32)
+   @DepartmentID INT
 AS
-WITH TopProdCTE(ProductID, ProductName, ItemQuantity) AS
+WITH TopProdCTE(ProductID, ProductName, QuantitySold) AS
 	(
-		SELECT P.ProductID, P.ProductName, TD.ItemQuantity
+		SELECT DISTINCT P.ProductID, P.ProductName, 
+			SUM(TD.ItemQuantity) OVER(
+				PARTITION BY P.ProductID
+				) AS QuantitySold
 		FROM Stores.Department D
-			RIGHT JOIN Stores.Product P ON P.DepartmentID = D.DepartmentID
-			RIGHT JOIN Stores.TransactionDetails TD ON TD.ProductID = P.ProductID
-		WHERE D.DepartmentName = @DepartmentName
+			INNER JOIN Stores.Product P ON P.DepartmentID = D.DepartmentID
+			INNER JOIN Stores.TransactionDetails TD ON TD.ProductID = P.ProductID
+		WHERE D.DepartmentID = @DepartmentID
+		GROUP BY P.ProductID, P.ProductName, TD.ItemQuantity
 	)
-SELECT TOP 10 TP.ProductName, 
-	SUM(TP.ItemQuantity) OVER(
-		PARTITION BY TP.ProductID
-	) AS QuantitySold
+SELECT TOP 10 TP.ProductName, TP.QuantitySold
 FROM TopProdCTE TP
-ORDER BY ItemQuantity DESC, ProductName ASC;
+ORDER BY QuantitySold DESC, ProductName ASC;

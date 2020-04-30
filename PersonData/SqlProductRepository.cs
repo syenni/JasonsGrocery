@@ -57,6 +57,18 @@ namespace DepartmentData
             return executor.ExecuteReader(d);
         }
 
-        
+        public IReadOnlyList<Product> RetrieveExpensiveProducts(int departmentID)
+        {
+            //return executor.ExecuteReader(new RetrieveProductsForDepartmentDataDelegate(ProductID);
+            var d = new RetrieveExpensiveProductsForDepartmentDataDelegate(departmentID);
+            return executor.ExecuteReader(d);
+        }
+
+        public IReadOnlyList<Product> RetrieveTop10Products(int departmentID)
+        {
+            //return executor.ExecuteReader(new RetrieveProductsForDepartmentDataDelegate(ProductID);
+            var d = new RetrieveTop10ProductsForDepartmentDataDelegate(departmentID);
+            return executor.ExecuteReader(d);
+        }
     }
 }

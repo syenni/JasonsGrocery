@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using StoreData.Models;
+using System;
 
 namespace ProductData
 {
-   public interface IProductRepository
+   public interface ISalesRepository
    {
         /// <summary>
         /// Retrieves all Products in the database.
@@ -11,13 +12,7 @@ namespace ProductData
         /// <returns>
         /// <see cref="IReadOnlyList{Product}"/> containing all Products.
         /// </returns>
-        IReadOnlyList<Product> RetrieveProducts(int departmentID);
-
-        IReadOnlyList<Product> RetrieveProductsUnderCount(int quantity);
-
-        IReadOnlyList<Product> RetrieveExpensiveProducts(int departmentID);
-
-        IReadOnlyList<Product> RetrieveTop10Products(int departmentID);
+        IReadOnlyList<Sales> RetrieveDailySales(DateTime date);
 
         /// <summary>
         /// Fetches the Product with the given <paramref name="ProductId"/> if it exists.
@@ -29,7 +24,7 @@ namespace ProductData
         /// <exception cref="DataAccess.RecordNotFoundException">
         /// Thrown if <paramref name="ProductId"/> does not exist.
         /// </exception>
-        Product FetchProduct(int ProductID);
+        //Product FetchProduct(int ProductID);
 
         /// <summary>
         /// Gets the Product with the given <paramref name="ProductId"/> if it exists.
@@ -40,7 +35,7 @@ namespace ProductData
         /// if one exists with with the provided <paramref name="email"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        Product GetProduct(string ProductName);
+        //Product GetProduct(string ProductName);
 
 
 

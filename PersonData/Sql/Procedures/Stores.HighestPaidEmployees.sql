@@ -1,6 +1,8 @@
 ﻿--6Q: I want to see the highest paid employees
-SELECT D.DepartmentName, E.EmployeeName, WP.PositionName, WP.HourlyPay
+CREATE OR ALTER PROCEDURE Stores.HighestPaidEmployees
+AS
+SELECT D.DepartmentName, E.EmployeeName, WP.PositionName, E.HourlyPay
 FROM Stores.Department D
 	INNER JOIN Stores.Employee E ON E.DepartmentID = D.DepartmentID
 	INNER JOIN Stores.WorkPosition WP ON WP.WorkPositionID = E.WorkPositionID
-ORDER BY WP.HourlyPay DESC;
+ORDER BY E.HourlyPay DESC;

@@ -140,5 +140,94 @@ namespace JasonsGrocery
             
         }
 
+        private void UxExpensiveItems_Click(object sender, EventArgs e)
+        {
+            repo = new SqlProductRepository(connectionString);
+            uxdataGridView.Columns.Clear();
+            uxdataGridView.Columns.Add("ProductName", "Product Name");
+            uxdataGridView.Columns.Add("UnitPrice", "Unit Price");
+
+            if (DairyRadioButton.Checked)
+            {
+                var products = repo.RetrieveExpensiveProducts(3); //Dairy's ID = 3
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                }
+            }
+            else if (DeliRadioButton.Checked)
+            {
+                var products = repo.RetrieveExpensiveProducts(2); //Deli's ID = 2
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                }
+            }
+            else if (ProduceRadioButton.Checked)
+            {
+                var products = repo.RetrieveExpensiveProducts(1); //Produce's ID = 1
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                }
+            }
+            else if (BakeryRadioButton.Checked)
+            {
+                var products = repo.RetrieveExpensiveProducts(4); //Bakery's ID = 4
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                }
+            }
+        }
+
+        private void UxTopProducts_Click(object sender, EventArgs e)
+        {
+            repo = new SqlProductRepository(connectionString);
+            uxdataGridView.Columns.Clear();
+            uxdataGridView.Columns.Add("ProductName", "Product Name");
+            uxdataGridView.Columns.Add("StockQuantity", "Quantity Purchased");
+
+            if (DairyRadioButton.Checked)
+            {
+                var products = repo.RetrieveTop10Products(3); //Dairy's ID = 3
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.StockQuantity);
+                }
+            }
+            else if (DeliRadioButton.Checked)
+            {
+                var products = repo.RetrieveTop10Products(2); //Deli's ID = 2
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.StockQuantity);
+                }
+            }
+            else if (ProduceRadioButton.Checked)
+            {
+                var products = repo.RetrieveTop10Products(1); //Produce's ID = 1
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.StockQuantity);
+                }
+            }
+            else if (BakeryRadioButton.Checked)
+            {
+                var products = repo.RetrieveTop10Products(4); //Bakery's ID = 4
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.StockQuantity);
+                }
+            }
+        }
     }
 }

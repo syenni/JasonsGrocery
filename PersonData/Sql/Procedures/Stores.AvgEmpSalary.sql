@@ -3,19 +3,18 @@ CREATE OR ALTER PROCEDURE Stores.AvgEmpSalary
 	@PositionName NVARCHAR(32)
 AS
 --DECLARE @PositionName NVARCHAR(32) = N'Manager';
-WITH AVGCTE(EmployeeID, DepartmentName, WorkPosition, HourlyPay) AS
+WITH AVGCTE(EmployeeID, PositionName, HourlyPay) AS
 	(
-		SELECT E.EmployeeID, D.DepartmentName, WP.PositionName, E.HourlyPay
-		FROM Stores.Store S
-			INNER JOIN Stores.Department D ON D.StoreID = S.StoreID
-			INNER JOIN Stores.Employee E ON E.DepartmentID = D.DepartmentID
+		SELECT E.EmployeeID, WP.PositionName, E.HourlyPay
+		FROM Stores.Employee E
 			INNER JOIN Stores.WorkPosition WP ON WP.WorkPositionID = E.WorkPositionID
+		WHERE WP.PositionName = @PositionName
+		GROUP BY E.EmployeeID, WP.PositionName, E.HourlyPay
 	)
-SELECT AC.DepartmentName, AC.WorkPosition,
+SELECT DISTINCT AC.PositionName,
 	AVG(AC.HourlyPay) OVER(
 		PARTITION BY AC.EmployeeID
 	) AS AverageEmployeePay
 FROM AVGCTE AC
---WHERE @PositionName = AC.WorkPosition
-WHERE AC.WorkPosition = @PositionName
-ORDER BY WorkPosition ASC;
+GROUP BY AC.PositionName, AC.EmployeeID, AC.HourlyPay
+ORDER BY PositionName ASC;

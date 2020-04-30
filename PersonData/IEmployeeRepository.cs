@@ -11,7 +11,7 @@ namespace EmployeeData
       /// <returns>
       /// <see cref="IReadOnlyList{Employee}"/> containing all Employees.
       /// </returns>
-      IReadOnlyList<Employee> RetrieveEmployees();
+      IReadOnlyList<Employee> RetrieveEmployeesInDepartment(int departmentID);
 
       /// <summary>
       /// Fetches the Employee with the given <paramref name="EmployeeId"/> if it exists.

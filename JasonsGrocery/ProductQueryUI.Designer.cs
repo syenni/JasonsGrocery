@@ -40,7 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.uxTopProducts = new System.Windows.Forms.Button();
             this.uxNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.uxPriceHighToLow = new System.Windows.Forms.Button();
+            this.uxExpensiveItems = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.uxdataGridView)).BeginInit();
@@ -63,7 +63,7 @@
             // uxItemUnderQuantity
             // 
             this.uxItemUnderQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxItemUnderQuantity.Location = new System.Drawing.Point(24, 223);
+            this.uxItemUnderQuantity.Location = new System.Drawing.Point(25, 362);
             this.uxItemUnderQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.uxItemUnderQuantity.Name = "uxItemUnderQuantity";
             this.uxItemUnderQuantity.Size = new System.Drawing.Size(173, 52);
@@ -91,7 +91,7 @@
             this.uxdataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.uxdataGridView.Name = "uxdataGridView";
             this.uxdataGridView.RowHeadersWidth = 51;
-            this.uxdataGridView.Size = new System.Drawing.Size(789, 490);
+            this.uxdataGridView.Size = new System.Drawing.Size(431, 490);
             this.uxdataGridView.TabIndex = 5;
             // 
             // DeliRadioButton
@@ -169,56 +169,58 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.uxTopProducts);
             this.panel1.Controls.Add(this.uxNumericUpDown);
-            this.panel1.Controls.Add(this.uxPriceHighToLow);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.uxExpensiveItems);
             this.panel1.Controls.Add(this.ProduceRadioButton);
             this.panel1.Controls.Add(this.DeliRadioButton);
-            this.panel1.Controls.Add(this.uxCheckItemStock);
             this.panel1.Controls.Add(this.uxItemUnderQuantity);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.uxCheckItemStock);
             this.panel1.Controls.Add(this.DairyRadioButton);
             this.panel1.Controls.Add(this.BakeryRadioButton);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(16, 9);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 443);
+            this.panel1.Size = new System.Drawing.Size(225, 427);
             this.panel1.TabIndex = 12;
             // 
             // uxTopProducts
             // 
             this.uxTopProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxTopProducts.Location = new System.Drawing.Point(24, 367);
+            this.uxTopProducts.Location = new System.Drawing.Point(24, 223);
             this.uxTopProducts.Margin = new System.Windows.Forms.Padding(4);
             this.uxTopProducts.Name = "uxTopProducts";
             this.uxTopProducts.Size = new System.Drawing.Size(173, 64);
             this.uxTopProducts.TabIndex = 16;
             this.uxTopProducts.Text = "Top 10 Products";
             this.uxTopProducts.UseVisualStyleBackColor = true;
+            this.uxTopProducts.Click += new System.EventHandler(this.UxTopProducts_Click);
             // 
             // uxNumericUpDown
             // 
-            this.uxNumericUpDown.Location = new System.Drawing.Point(51, 193);
+            this.uxNumericUpDown.Location = new System.Drawing.Point(50, 334);
             this.uxNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uxNumericUpDown.Name = "uxNumericUpDown";
             this.uxNumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.uxNumericUpDown.TabIndex = 13;
             // 
-            // uxPriceHighToLow
+            // uxExpensiveItems
             // 
-            this.uxPriceHighToLow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxPriceHighToLow.Location = new System.Drawing.Point(24, 295);
-            this.uxPriceHighToLow.Margin = new System.Windows.Forms.Padding(4);
-            this.uxPriceHighToLow.Name = "uxPriceHighToLow";
-            this.uxPriceHighToLow.Size = new System.Drawing.Size(173, 64);
-            this.uxPriceHighToLow.TabIndex = 15;
-            this.uxPriceHighToLow.Text = "Price(High->Low)";
-            this.uxPriceHighToLow.UseVisualStyleBackColor = true;
+            this.uxExpensiveItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxExpensiveItems.Location = new System.Drawing.Point(24, 151);
+            this.uxExpensiveItems.Margin = new System.Windows.Forms.Padding(4);
+            this.uxExpensiveItems.Name = "uxExpensiveItems";
+            this.uxExpensiveItems.Size = new System.Drawing.Size(173, 64);
+            this.uxExpensiveItems.TabIndex = 15;
+            this.uxExpensiveItems.Text = "Expensive Items";
+            this.uxExpensiveItems.UseVisualStyleBackColor = true;
+            this.uxExpensiveItems.Click += new System.EventHandler(this.UxExpensiveItems_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 163);
+            this.label2.Location = new System.Drawing.Point(19, 304);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(189, 24);
             this.label2.TabIndex = 13;
@@ -227,17 +229,17 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(-1, 151);
+            this.panel2.Location = new System.Drawing.Point(-1, 295);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(225, 136);
+            this.panel2.Size = new System.Drawing.Size(225, 131);
             this.panel2.TabIndex = 17;
             // 
             // uxProductQueryUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 517);
+            this.ClientSize = new System.Drawing.Size(709, 517);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.uxdataGridView);
             this.Controls.Add(this.label1);
@@ -269,7 +271,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button uxTopProducts;
         private System.Windows.Forms.NumericUpDown uxNumericUpDown;
-        private System.Windows.Forms.Button uxPriceHighToLow;
+        private System.Windows.Forms.Button uxExpensiveItems;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
     }

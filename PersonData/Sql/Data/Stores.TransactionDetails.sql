@@ -1,6 +1,5 @@
 ﻿SELECT *
 FROM Stores.TransactionDetails
-
 /***************************** Modify values here *****************************/
 
 --insert the transaction details for that specific transaction using a scope indentity for the transactionId
@@ -100,3 +99,51 @@ FROM Stores.Product P
 	RIGHT JOIN Stores.TransactionDetails TD4 ON TD4.ProductID = P.ProductID
 	INNER JOIN Stores.[Transaction] T ON T.TransactionID = TD4.TransactionID
 WHERE T.TransactionID = 4;
+
+--Tranaction 5
+INSERT Stores.TransactionDetails(TransactionID, ProductID, StoreID, UnitPrice, ItemQuantity)
+SELECT T.TransactionID, P.ProductID, P.StoreID, TD5.UnitPrice, TD5.ItemQuantity
+FROM 
+	(
+		VALUES
+			(N'PepperJack Cheese', 3*2, 2),
+			(N'Swiss Cheese', 2*2, 2),
+			(N'Provolone Cheese', 2*2, 2),
+			(N'Wheat Bread',3.50*4 , 4),
+			(N'Beef', 4*6 , 6),
+			(N'Raisin Cookies', 1*4, 4),
+			(N'Cucumbers', 1.75*1, 1),
+			(N'Peppers',1*2 , 2)
+	) TD5(ProductName, UnitPrice, ItemQuantity)
+	INNER JOIN Stores.Product P ON P.ProductName = TD5.ProductName
+	INNER JOIN Stores.[Transaction] T ON T.StoreID = P.StoreID AND T.TransactionID = 5;
+
+--update after transaction 5
+UPDATE P 
+SET	
+	StockQuantity -= TD5.ItemQuantity
+FROM Stores.Product P
+	RIGHT JOIN Stores.TransactionDetails TD5 ON TD5.ProductID = P.ProductID
+	INNER JOIN Stores.[Transaction] T ON T.TransactionID = TD5.TransactionID
+WHERE T.TransactionID = 5;
+
+--Tranaction 6
+INSERT Stores.TransactionDetails(TransactionID, ProductID, StoreID, UnitPrice, ItemQuantity)
+SELECT T.TransactionID, P.ProductID, P.StoreID, TD6.UnitPrice, TD6.ItemQuantity
+FROM 
+	(
+		VALUES
+			(N'Milk', 2*2, 2),
+			(N'Rocky Road Ice Cream', 3.25*1, 1)
+	) TD6(ProductName, UnitPrice, ItemQuantity)
+	INNER JOIN Stores.Product P ON P.ProductName = TD6.ProductName
+	INNER JOIN Stores.[Transaction] T ON T.StoreID = P.StoreID AND T.TransactionID = 6;
+
+--update after transaction 6
+UPDATE P 
+SET	
+	StockQuantity -= TD6.ItemQuantity
+FROM Stores.Product P
+	RIGHT JOIN Stores.TransactionDetails TD6 ON TD6.ProductID = P.ProductID
+	INNER JOIN Stores.[Transaction] T ON T.TransactionID = TD6.TransactionID
+WHERE T.TransactionID = 6;

@@ -3,6 +3,7 @@ using DataAccess;
 using StoreData.Models;
 using EmployeeData.DataDelegates;
 using System;
+using DepartmentData.DataDelegates;
 
 namespace EmployeeData
 {
@@ -42,9 +43,10 @@ namespace EmployeeData
          return executor.ExecuteReader(d);
       }
 
-      public IReadOnlyList<Employee> RetrieveEmployees()
+      public IReadOnlyList<Employee> RetrieveEmployeesInDepartment(int departmentID)
       {
-         return executor.ExecuteReader(new RetrieveEmployeesDataDelegate());
-      }
+            var d = new RetrieveEmployeesInDepartmentDataDelegate(departmentID);
+            return executor.ExecuteReader(d);
+        }
    }
 }

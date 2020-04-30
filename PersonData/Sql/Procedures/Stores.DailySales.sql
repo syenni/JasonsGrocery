@@ -1,5 +1,7 @@
 ﻿--3R: daily sales
-DECLARE @SelectedDate DATE = SYSDATETIMEOFFSET();
+CREATE OR ALTER PROCEDURE Stores.DailySales
+   @SelectedDate DATE
+AS
 WITH DailySales(ProductName, ItemQuantity, UnitPrice) AS
 	(
 		SELECT P.ProductName, TD.ItemQuantity, TD.UnitPrice

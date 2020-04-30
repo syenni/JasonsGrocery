@@ -13,14 +13,13 @@ namespace StoreData.Models
         public int WorkPositionID { get;}
         public string EmployeeName { get; }
         public DateTime StartDate { get; }
+        public string PositionName { get; }
 
-        public Employee(int employeeID, DepartmentType departmentType, WorkPositionType workPosition, string employeeName, DateTime startDate)
+        public Employee(int employeeID, string employeeName, string positionName)
         {
             EmployeeID = employeeID;
-            DepartmentID = (int)departmentType;
-            WorkPositionID = (int)workPosition;
             EmployeeName = employeeName;
-            StartDate = startDate;
+            PositionName = positionName;
         }
     }
 }

@@ -28,57 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.uxdateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.uxDailySales = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
+            this.uxdataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.uxdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // uxdateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 12);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 0;
+            this.uxdateTimePicker.Location = new System.Drawing.Point(16, 15);
+            this.uxdateTimePicker.Margin = new System.Windows.Forms.Padding(4);
+            this.uxdateTimePicker.Name = "uxdateTimePicker";
+            this.uxdateTimePicker.Size = new System.Drawing.Size(236, 22);
+            this.uxdateTimePicker.TabIndex = 0;
             // 
-            // button1
+            // uxDailySales
             // 
-            this.button1.Location = new System.Drawing.Point(12, 39);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Daily Sales";
-            this.button1.UseVisualStyleBackColor = true;
+            this.uxDailySales.Location = new System.Drawing.Point(273, 13);
+            this.uxDailySales.Margin = new System.Windows.Forms.Padding(4);
+            this.uxDailySales.Name = "uxDailySales";
+            this.uxDailySales.Size = new System.Drawing.Size(100, 28);
+            this.uxDailySales.TabIndex = 1;
+            this.uxDailySales.Text = "Daily Sales";
+            this.uxDailySales.UseVisualStyleBackColor = true;
+            this.uxDailySales.Click += new System.EventHandler(this.UxDailySales_Click);
             // 
             // BackButton
             // 
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(12, 336);
+            this.BackButton.Location = new System.Drawing.Point(16, 414);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(4);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 32);
+            this.BackButton.Size = new System.Drawing.Size(100, 39);
             this.BackButton.TabIndex = 12;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // uxdataGridView
+            // 
+            this.uxdataGridView.AllowUserToDeleteRows = false;
+            this.uxdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxdataGridView.Location = new System.Drawing.Point(13, 51);
+            this.uxdataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.uxdataGridView.Name = "uxdataGridView";
+            this.uxdataGridView.RowHeadersWidth = 51;
+            this.uxdataGridView.Size = new System.Drawing.Size(600, 355);
+            this.uxdataGridView.TabIndex = 13;
+            // 
             // SalesQueryUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 380);
+            this.ClientSize = new System.Drawing.Size(627, 468);
+            this.Controls.Add(this.uxdataGridView);
             this.Controls.Add(this.BackButton);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.uxDailySales);
+            this.Controls.Add(this.uxdateTimePicker);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SalesQueryUI";
             this.Text = "SalesQueryUI";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SalesQueryUI_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.uxdataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker uxdateTimePicker;
+        private System.Windows.Forms.Button uxDailySales;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.DataGridView uxdataGridView;
     }
 }
