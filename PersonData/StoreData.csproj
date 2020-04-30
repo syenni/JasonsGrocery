@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataDelegates\CreateEmployeeDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchDepartmentDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchProductDataDelegate.cs" />
     <Compile Include="DataDelegates\GetProductDataDelegate.cs" />
@@ -181,6 +182,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Sql\Procedures\Stores.TransactionExample.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sql\Procedures\Stores.CreateEmployee.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

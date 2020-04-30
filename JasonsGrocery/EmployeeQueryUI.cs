@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EmployeeData;
 using WorkPositionData;
+using StoreData.Models;
 
 namespace JasonsGrocery
 {
@@ -150,7 +151,70 @@ namespace JasonsGrocery
 
         public void addEmployeeInfo(string employeeName, string workPosition, string departmentName, double hourlyPay)
         {
+            int workPositionID = 0;
+            switch(workPosition)
+            {
+                case "Manager":
+                    workPositionID = (int) WorkPositionType.Manager;
+                    break;
+                case "Cashier":
+                    workPositionID = (int)WorkPositionType.Cashier;
+                    break;
+                case "Clerk":
+                    workPositionID = (int)WorkPositionType.Clerk;
+                    break;
+                case "Janitor":
+                    workPositionID = (int)WorkPositionType.Janitor;
+                    break;
+                case "Director":
+                    workPositionID = (int)WorkPositionType.Director;
+                    break;
+                case "AssistantManager":
+                    workPositionID = (int)WorkPositionType.AssistantManager;
+                    break;
+            }
+
+            int departmentID = 0;
+            switch (workPosition)
+            {
+                case "Bakery":
+                    departmentID = (int)DepartmentType.Bakery;
+                    break;
+                case "Deli":
+                    departmentID = (int)DepartmentType.Deli;
+                    break;
+                case "Produce":
+                    departmentID = (int)DepartmentType.Produce;
+                    break;
+                case "Dairy":
+                    departmentID = (int)DepartmentType.Dairy;
+                    break;
+            }
             //execute query
+            repo = new SqlEmployeeRepository(connectionString);
+            uxdataGridView.Columns.Clear();
+            var employee = repo.CreateEmployee(employeeName, workPositionID, departmentID, hourlyPay);
+            if (employee != null)
+            {
+                if (departmentID == 1)
+                {
+                    MessageBox.Show("Employee Added Successfully to Produce Department");
+                }
+                else if (departmentID == 2)
+                {
+                    MessageBox.Show("Employee Added Successfully to Deli Department");
+                }
+                else if (departmentID == 3)
+                {
+                    MessageBox.Show("Employee Added Successfully to Dairy Department");
+                }
+                else if (departmentID == 4)
+                {
+                    MessageBox.Show("Employee Added Successfully to Bakery Department");
+                }
+            }
+            else MessageBox.Show("Error in adding Employee");
+
         }
     }
 }

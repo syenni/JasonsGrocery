@@ -10,16 +10,27 @@ namespace StoreData.Models
     {
         public int EmployeeID { get; }
         public int DepartmentID { get; }
+        public string DepartmentName { get; }
         public int WorkPositionID { get;}
         public string EmployeeName { get; }
         public DateTime StartDate { get; }
         public string PositionName { get; }
+        public double HourlyPay { get; }
 
         public Employee(int employeeID, string employeeName, string positionName)
         {
             EmployeeID = employeeID;
             EmployeeName = employeeName;
             PositionName = positionName;
+        }
+
+        public Employee(int employeeID, string employeeName, int workPositionID, int departmentID, double hourlyPay)
+        {
+            EmployeeID = employeeID;
+            EmployeeName = employeeName;
+            WorkPositionID = workPositionID;
+            DepartmentID = departmentID;
+            HourlyPay = hourlyPay;
         }
     }
 }
