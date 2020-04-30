@@ -13,7 +13,7 @@ namespace ProductData
         /// </returns>
         IReadOnlyList<Product> RetrieveProducts(int departmentID);
 
-        IReadOnlyList<Product> RetrieveProductsUnderCount(int departmentID, int quantity);
+        IReadOnlyList<Product> RetrieveProductsUnderCount(int quantity);
 
         /// <summary>
         /// Fetches the Product with the given <paramref name="ProductId"/> if it exists.

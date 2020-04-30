@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DepartmentData;
 using ProductData;
+using StoreData;
 
 namespace JasonsGrocery
 {
@@ -86,7 +87,7 @@ namespace JasonsGrocery
 
             if (DairyRadioButton.Checked)
             {
-                var products = repo.RetrieveProducts(3); //Deli's ID = 3
+                var products = repo.RetrieveProducts(3); //Dairy's ID = 3
 
                 foreach (var y in products)
                 {
@@ -126,43 +127,18 @@ namespace JasonsGrocery
         {
             repo = new SqlProductRepository(connectionString);
             int quantity = (int)uxNumericUpDown.Value;
+            uxdataGridView.Columns.Clear();
+            uxdataGridView.Columns.Add("ProductName", "Product Name");
+            uxdataGridView.Columns.Add("StockQuantity", "Stock Quantity");
 
-            if (DairyRadioButton.Checked)
+            var products = repo.RetrieveProductsUnderCount(quantity); //Dairy's ID = 3
+
+            foreach (var y in products)
             {
-                var products = repo.RetrieveProductsUnderCount(3, quantity);//Deli's ID = 3
-
-                foreach (var y in products)
-                {
-                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
-                }
+                uxdataGridView.Rows.Add(y.ProductName, y.StockQuantity);
             }
-            else if (DeliRadioButton.Checked)
-            {
-                var products = repo.RetrieveProducts(2); //Deli's ID = 2
-
-                foreach (var y in products)
-                {
-                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
-                }
-            }
-            else if (ProduceRadioButton.Checked)
-            {
-                var products = repo.RetrieveProducts(1); //Produce's ID = 1
-
-                foreach (var y in products)
-                {
-                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
-                }
-            }
-            else if (BakeryRadioButton.Checked)
-            {
-                var products = repo.RetrieveProducts(4); //Bakery's ID = 4
-
-                foreach (var y in products)
-                {
-                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
-                }
-            }
+            
         }
+
     }
 }

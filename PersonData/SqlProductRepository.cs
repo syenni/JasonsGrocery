@@ -44,9 +44,9 @@ namespace DepartmentData
             return executor.ExecuteReader(d);
         }
 
-        public IReadOnlyList<Product> RetrieveProductsUnderCount(int departmentID, int quantity)
+        public IReadOnlyList<Product> RetrieveProductsUnderCount(int quantity)
         {
-            var d = new RetrieveProductsForDepartmentUnderCountDataDelegate(departmentID, quantity);
+            var d = new RetrieveProductsForDepartmentUnderCountDataDelegate(quantity);
             return executor.ExecuteReader(d);
         }
 

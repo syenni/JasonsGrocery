@@ -14,6 +14,7 @@ namespace StoreData.Models
         public double UnitPrice { get; }
         public int StockQuantity { get; }
         public string ProductName { get; }
+        public string DepartmentName { get; }
 
         public Product(int productID, int storeID, DepartmentType departmentType, double unitprice, int stockquantity, string productName)
         {
@@ -32,9 +33,9 @@ namespace StoreData.Models
             this.ProductName = productName;
         }
 
-        public Product(int departmentID, int quantity, string productName)
+        public Product(string departmentName, int quantity, string productName)
         {
-            this.DepartmentID = departmentID;
+            this.DepartmentName = departmentName;
             this.StockQuantity = quantity;
             this.ProductName = productName;
         }

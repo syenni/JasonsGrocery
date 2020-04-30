@@ -8,13 +8,11 @@ namespace DepartmentData.DataDelegates
 {
    internal class RetrieveProductsForDepartmentUnderCountDataDelegate : DataReaderDelegate<IReadOnlyList<Product>>
    {
-        private readonly int departmentID;
         private readonly int quantity;
 
-        public RetrieveProductsForDepartmentUnderCountDataDelegate(int departmentID, int quantity)
-            : base("Stores.ItemsInDept") //name of procedure
+        public RetrieveProductsForDepartmentUnderCountDataDelegate(int quantity)
+            : base("Stores.ItemStockUnderQuantity") //name of procedure
         {
-            this.departmentID = departmentID;
             this.quantity = quantity;
         }
 
@@ -22,8 +20,8 @@ namespace DepartmentData.DataDelegates
         {
             base.PrepareCommand(command);
 
-            var p = command.Parameters.AddWithValue("DepartmentID", departmentID);
-            var p1 = command.Parameters.AddWithValue("Quantity", quantity);
+            //var p = command.Parameters.AddWithValue("DepartmentID", departmentID);
+            var p = command.Parameters.AddWithValue("Quantity", quantity);
             //p.Value = departmentID;
         }
       
@@ -35,7 +33,7 @@ namespace DepartmentData.DataDelegates
             {
                 //product just product id and name (match with select in query)
                 Products.Add(new Product(
-                    departmentID,
+                    reader.GetString("DepartmentName"),
                     reader.GetInt32("StockQuantity"),
                     reader.GetString("ProductName")
                     ));

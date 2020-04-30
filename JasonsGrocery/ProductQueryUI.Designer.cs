@@ -42,6 +42,7 @@
             this.uxNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.uxPriceHighToLow = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.uxdataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxNumericUpDown)).BeginInit();
@@ -53,7 +54,7 @@
             this.uxCheckItemStock.Location = new System.Drawing.Point(24, 97);
             this.uxCheckItemStock.Margin = new System.Windows.Forms.Padding(4);
             this.uxCheckItemStock.Name = "uxCheckItemStock";
-            this.uxCheckItemStock.Size = new System.Drawing.Size(173, 66);
+            this.uxCheckItemStock.Size = new System.Drawing.Size(173, 46);
             this.uxCheckItemStock.TabIndex = 0;
             this.uxCheckItemStock.Text = "Check Item Stock";
             this.uxCheckItemStock.UseVisualStyleBackColor = true;
@@ -65,7 +66,7 @@
             this.uxItemUnderQuantity.Location = new System.Drawing.Point(24, 223);
             this.uxItemUnderQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.uxItemUnderQuantity.Name = "uxItemUnderQuantity";
-            this.uxItemUnderQuantity.Size = new System.Drawing.Size(173, 64);
+            this.uxItemUnderQuantity.Size = new System.Drawing.Size(173, 52);
             this.uxItemUnderQuantity.TabIndex = 1;
             this.uxItemUnderQuantity.Text = "Item Under Quantity";
             this.uxItemUnderQuantity.UseVisualStyleBackColor = true;
@@ -176,6 +177,7 @@
             this.panel1.Controls.Add(this.uxItemUnderQuantity);
             this.panel1.Controls.Add(this.DairyRadioButton);
             this.panel1.Controls.Add(this.BakeryRadioButton);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(16, 9);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
@@ -195,7 +197,7 @@
             // 
             // uxNumericUpDown
             // 
-            this.uxNumericUpDown.Location = new System.Drawing.Point(51, 194);
+            this.uxNumericUpDown.Location = new System.Drawing.Point(51, 193);
             this.uxNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uxNumericUpDown.Name = "uxNumericUpDown";
             this.uxNumericUpDown.Size = new System.Drawing.Size(120, 22);
@@ -216,11 +218,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 167);
+            this.label2.Location = new System.Drawing.Point(20, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(189, 24);
             this.label2.TabIndex = 13;
             this.label2.Text = "Items Under Quantity:";
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(-1, 151);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(225, 136);
+            this.panel2.TabIndex = 17;
             // 
             // uxProductQueryUI
             // 
@@ -260,5 +271,6 @@
         private System.Windows.Forms.NumericUpDown uxNumericUpDown;
         private System.Windows.Forms.Button uxPriceHighToLow;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
     }
 }
