@@ -1,4 +1,5 @@
-﻿
+﻿SELECT *
+FROM Stores.Product
 
 /***************************** Modify values here *****************************/
 

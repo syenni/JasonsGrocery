@@ -7,8 +7,8 @@
     <ProjectGuid>{D51AA58C-05B9-4A7D-9F80-CCEBF8A0EAF0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PersonData</RootNamespace>
-    <AssemblyName>PersonData</AssemblyName>
+    <RootNamespace>StoreData</RootNamespace>
+    <AssemblyName>StoreData</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -49,6 +49,7 @@
     <Compile Include="DataDelegates\FetchEmployeeDataDelegate.cs" />
     <Compile Include="DataDelegates\GetWorkPositionDataDelegate.cs" />
     <Compile Include="DataDelegates\GetEmployeeDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrieveProductsForDepartmentUnderCountDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveWorkPositionsDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveEmployeesDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveDepartmentsDataDelegate.cs" />

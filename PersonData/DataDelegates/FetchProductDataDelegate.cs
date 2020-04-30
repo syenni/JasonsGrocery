@@ -16,7 +16,7 @@ namespace PersonData.DataDelegates
         private readonly int ProductID;
 
         public FetchProductDataDelegate(int ProductID)
-           : base("Department.FetchDepartment")
+           : base("Stores.ItemsInDept")
         {
             this.ProductID = ProductID;
         }
@@ -25,6 +25,7 @@ namespace PersonData.DataDelegates
         {
             base.PrepareCommand(command);
 
+            //var p = command.Parameters.AddWithValue("DepartmentID", departmentID);
             var p = command.Parameters.Add("DepartmentID", SqlDbType.Int);
             p.Value = ProductID;
         }

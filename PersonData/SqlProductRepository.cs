@@ -44,11 +44,19 @@ namespace DepartmentData
             return executor.ExecuteReader(d);
         }
 
-        public IReadOnlyList<Product> RetrieveProducts(int productID)
+        public IReadOnlyList<Product> RetrieveProductsUnderCount(int departmentID, int quantity)
         {
-            //return executor.ExecuteReader(new RetrieveProductsForDepartmentDataDelegate(ProductID);
-            var d = new RetrieveProductsForDepartmentDataDelegate(productID);
+            var d = new RetrieveProductsForDepartmentUnderCountDataDelegate(departmentID, quantity);
             return executor.ExecuteReader(d);
         }
+
+        public IReadOnlyList<Product> RetrieveProducts(int departmentID)
+        {
+            //return executor.ExecuteReader(new RetrieveProductsForDepartmentDataDelegate(ProductID);
+            var d = new RetrieveProductsForDepartmentDataDelegate(departmentID);
+            return executor.ExecuteReader(d);
+        }
+
+        
     }
 }

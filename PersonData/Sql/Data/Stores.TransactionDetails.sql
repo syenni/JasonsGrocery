@@ -1,4 +1,5 @@
-﻿
+﻿SELECT *
+FROM Stores.TransactionDetails
 
 /***************************** Modify values here *****************************/
 
@@ -18,7 +19,7 @@ FROM
 			(N'Sugar Cookies',4.50 , 3)
 	) TD(ProductName, UnitPrice, ItemQuantity)
 	INNER JOIN Stores.Product P ON P.ProductName = TD.ProductName
-	INNER JOIN Stores.[Transaction] T ON T.StoreID = P.StoreID;
+	INNER JOIN Stores.[Transaction] T ON T.StoreID = P.StoreID AND T.TransactionID = 1;
 
 --update after transaction 1
 UPDATE P 
@@ -31,7 +32,7 @@ WHERE T.TransactionID = 1;
 /******************************************************************************/
 --insert the transaction details for transaction 2 using a scope indentity for the transactionId
 INSERT Stores.TransactionDetails(TransactionID, ProductID, StoreID, UnitPrice, ItemQuantity)
-SELECT T.TransactionID, P.ProductID, P.StoreID, TD.UnitPrice, TD.ItemQuantity
+SELECT T.TransactionID, P.ProductID, P.StoreID, TD1.UnitPrice, TD1.ItemQuantity
 FROM 
 	(
 		VALUES
@@ -42,16 +43,60 @@ FROM
 			(N'Orange Sherbet', 1.75*2 , 2),
 			(N'Raisin Cookies', 5 , 5),
 			(N'Onions', 1.15*5 , 5)
-	) TD(ProductName, UnitPrice, ItemQuantity)
-	INNER JOIN Stores.Product P ON P.ProductName = TD.ProductName
+	) TD1(ProductName, UnitPrice, ItemQuantity)
+	INNER JOIN Stores.Product P ON P.ProductName = TD1.ProductName
 	INNER JOIN Stores.[Transaction] T ON T.StoreID = P.StoreID
-		AND T.TransactionID = 2;
+			AND T.TransactionID = 2;
 
 --update after transaction 2
 UPDATE P 
 SET	
-	StockQuantity -= TD.ItemQuantity
+	StockQuantity -= TD1.ItemQuantity
 FROM Stores.Product P
-	RIGHT JOIN Stores.TransactionDetails TD ON TD.ProductID = P.ProductID
-	INNER JOIN Stores.[Transaction] T ON T.TransactionID = TD.TransactionID
+	RIGHT JOIN Stores.TransactionDetails TD1 ON TD1.ProductID = P.ProductID
+	INNER JOIN Stores.[Transaction] T ON T.TransactionID = TD1.TransactionID
 WHERE T.TransactionID = 2;
+
+
+--Tranaction 3
+INSERT Stores.TransactionDetails(TransactionID, ProductID, StoreID, UnitPrice, ItemQuantity)
+SELECT T.TransactionID, P.ProductID, P.StoreID, TD3.UnitPrice, TD3.ItemQuantity
+FROM 
+	(
+		VALUES
+			(N'Turkey', 3, 1),
+			(N'Chicken', 4*10, 10)
+	) TD3(ProductName, UnitPrice, ItemQuantity)
+	INNER JOIN Stores.Product P ON P.ProductName = TD3.ProductName
+	INNER JOIN Stores.[Transaction] T ON T.StoreID = P.StoreID AND T.TransactionID = 3;
+
+--update after transaction 3
+UPDATE P 
+SET	
+	StockQuantity -= TD3.ItemQuantity
+FROM Stores.Product P
+	RIGHT JOIN Stores.TransactionDetails TD3 ON TD3.ProductID = P.ProductID
+	INNER JOIN Stores.[Transaction] T ON T.TransactionID = TD3.TransactionID
+WHERE T.TransactionID = 3;
+
+--Tranaction 4
+INSERT Stores.TransactionDetails(TransactionID, ProductID, StoreID, UnitPrice, ItemQuantity)
+SELECT T.TransactionID, P.ProductID, P.StoreID, TD4.UnitPrice, TD4.ItemQuantity
+FROM 
+	(
+		VALUES
+			(N'Double Chocolate Chip Cookies', 3.50*10, 10),
+			(N'Corn', 2.25*2, 2),
+			(N'Celery', 1, 1)
+	) TD4(ProductName, UnitPrice, ItemQuantity)
+	INNER JOIN Stores.Product P ON P.ProductName = TD4.ProductName
+	INNER JOIN Stores.[Transaction] T ON T.StoreID = P.StoreID AND T.TransactionID = 4;
+
+--update after transaction 4
+UPDATE P 
+SET	
+	StockQuantity -= TD4.ItemQuantity
+FROM Stores.Product P
+	RIGHT JOIN Stores.TransactionDetails TD4 ON TD4.ProductID = P.ProductID
+	INNER JOIN Stores.[Transaction] T ON T.TransactionID = TD4.TransactionID
+WHERE T.TransactionID = 4;

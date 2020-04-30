@@ -1,6 +1,6 @@
 Param(
-   [string] $Server = "SETH-PC\SQLEXPRESS", #"(localdb)\MSSQLLocalDb",
-   [string] $Database = "JasonsGrocery"
+   [string] $Server =  "(localdb)\MSSQLLocalDb", #"SETH-PC\SQLEXPRESS",
+   [string] $Database = "JasonsGrocery2"
 )
 
 # This script requires the SQL Server module for PowerShell.
@@ -56,14 +56,14 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Stores.TransactionExample.sql"
 
 Write-Host "Inserting data..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Stores.Employees.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Stores.Produce.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Stores.StoreDepartments.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Stores.StoreName.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Stores.StoreDepartments.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Stores.WorkPositions.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Stores.Employees.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Stores.TimeEntries.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Stores.Transaction.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Stores.Produce.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Stores.TransactionDetails.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Stores.WorkPositions.sql"
 
 Write-Host "Rebuild completed."
 Write-Host ""

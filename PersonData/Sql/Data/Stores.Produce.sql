@@ -1,6 +1,4 @@
-﻿
-
---inserting products in the Dairy and Produce department
+﻿--inserting products in the Dairy and Produce department
 INSERT Stores.Product(StoreID, DepartmentID, UnitPrice, StockQuantity, ProductName)
 SELECT S.StoreID, D.DepartmentID, Prod.UnitPrice, Prod.StockQuantity, Prod.ProductName
 FROM 

@@ -51,7 +51,7 @@
             // 
             this.uxCheckItemStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxCheckItemStock.Location = new System.Drawing.Point(24, 97);
-            this.uxCheckItemStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxCheckItemStock.Margin = new System.Windows.Forms.Padding(4);
             this.uxCheckItemStock.Name = "uxCheckItemStock";
             this.uxCheckItemStock.Size = new System.Drawing.Size(173, 66);
             this.uxCheckItemStock.TabIndex = 0;
@@ -63,12 +63,13 @@
             // 
             this.uxItemUnderQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxItemUnderQuantity.Location = new System.Drawing.Point(24, 223);
-            this.uxItemUnderQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxItemUnderQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.uxItemUnderQuantity.Name = "uxItemUnderQuantity";
             this.uxItemUnderQuantity.Size = new System.Drawing.Size(173, 64);
             this.uxItemUnderQuantity.TabIndex = 1;
             this.uxItemUnderQuantity.Text = "Item Under Quantity";
             this.uxItemUnderQuantity.UseVisualStyleBackColor = true;
+            this.uxItemUnderQuantity.Click += new System.EventHandler(this.uxItemUnderQuantity_Click);
             // 
             // label1
             // 
@@ -86,7 +87,7 @@
             this.uxdataGridView.AllowUserToDeleteRows = false;
             this.uxdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uxdataGridView.Location = new System.Drawing.Point(261, 9);
-            this.uxdataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxdataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.uxdataGridView.Name = "uxdataGridView";
             this.uxdataGridView.RowHeadersWidth = 51;
             this.uxdataGridView.Size = new System.Drawing.Size(789, 490);
@@ -98,7 +99,7 @@
             this.DeliRadioButton.BackColor = System.Drawing.SystemColors.Control;
             this.DeliRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeliRadioButton.Location = new System.Drawing.Point(24, 32);
-            this.DeliRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DeliRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.DeliRadioButton.Name = "DeliRadioButton";
             this.DeliRadioButton.Size = new System.Drawing.Size(60, 24);
             this.DeliRadioButton.TabIndex = 6;
@@ -112,7 +113,7 @@
             this.ProduceRadioButton.AutoSize = true;
             this.ProduceRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProduceRadioButton.Location = new System.Drawing.Point(116, 32);
-            this.ProduceRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ProduceRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.ProduceRadioButton.Name = "ProduceRadioButton";
             this.ProduceRadioButton.Size = new System.Drawing.Size(92, 24);
             this.ProduceRadioButton.TabIndex = 7;
@@ -126,7 +127,7 @@
             this.BakeryRadioButton.AutoSize = true;
             this.BakeryRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BakeryRadioButton.Location = new System.Drawing.Point(116, 65);
-            this.BakeryRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BakeryRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.BakeryRadioButton.Name = "BakeryRadioButton";
             this.BakeryRadioButton.Size = new System.Drawing.Size(82, 24);
             this.BakeryRadioButton.TabIndex = 8;
@@ -141,7 +142,7 @@
             this.DairyRadioButton.BackColor = System.Drawing.SystemColors.Control;
             this.DairyRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DairyRadioButton.Location = new System.Drawing.Point(24, 65);
-            this.DairyRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DairyRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.DairyRadioButton.Name = "DairyRadioButton";
             this.DairyRadioButton.Size = new System.Drawing.Size(70, 24);
             this.DairyRadioButton.TabIndex = 9;
@@ -154,7 +155,7 @@
             // 
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButton.Location = new System.Drawing.Point(16, 459);
-            this.BackButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(4);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(100, 39);
             this.BackButton.TabIndex = 11;
@@ -176,7 +177,7 @@
             this.panel1.Controls.Add(this.DairyRadioButton);
             this.panel1.Controls.Add(this.BakeryRadioButton);
             this.panel1.Location = new System.Drawing.Point(16, 9);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(225, 443);
             this.panel1.TabIndex = 12;
@@ -185,7 +186,7 @@
             // 
             this.uxTopProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxTopProducts.Location = new System.Drawing.Point(24, 367);
-            this.uxTopProducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxTopProducts.Margin = new System.Windows.Forms.Padding(4);
             this.uxTopProducts.Name = "uxTopProducts";
             this.uxTopProducts.Size = new System.Drawing.Size(173, 64);
             this.uxTopProducts.TabIndex = 16;
@@ -204,7 +205,7 @@
             // 
             this.uxPriceHighToLow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxPriceHighToLow.Location = new System.Drawing.Point(24, 295);
-            this.uxPriceHighToLow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxPriceHighToLow.Margin = new System.Windows.Forms.Padding(4);
             this.uxPriceHighToLow.Name = "uxPriceHighToLow";
             this.uxPriceHighToLow.Size = new System.Drawing.Size(173, 64);
             this.uxPriceHighToLow.TabIndex = 15;
@@ -230,7 +231,7 @@
             this.Controls.Add(this.uxdataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "uxProductQueryUI";
             this.Text = "ProductQueryUI";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ManagerUI_FormClosed);

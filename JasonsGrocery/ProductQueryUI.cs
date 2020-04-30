@@ -16,9 +16,8 @@ namespace JasonsGrocery
     {
         private ManagerBaseForm baseForm;
         public bool open;
-        const string connectionString = @"Server=Seth-PC\SQLEXPRESS;Database=JasonsGrocery;User Id=Ryan;Password=1781;"; //Integrated Security=SSPI;
+        const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=JasonsGrocery;Integrated Security=SSPI;";
         private IProductRepository repo;
-        
 
         public uxProductQueryUI(ManagerBaseForm f)
         {
@@ -81,24 +80,89 @@ namespace JasonsGrocery
         private void UxCheckItemStock_Click(object sender, EventArgs e)
         {
             repo = new SqlProductRepository(connectionString);
-            uxdataGridView.DataSource = repo.RetrieveProducts(2); //Test to retrieve the productID 2
-            
-            /*if (DairyRadioButton.Checked)
+            uxdataGridView.Columns.Clear();
+            uxdataGridView.Columns.Add("ProductName", "Product Name");
+            uxdataGridView.Columns.Add("UnitPrice", "Unit Price");
+
+            if (DairyRadioButton.Checked)
             {
-                uxdataGridView.DataSource = RetrieveProductsForDepartmentDataDelegate;
+                var products = repo.RetrieveProducts(3); //Deli's ID = 3
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                }
             }
             else if (DeliRadioButton.Checked)
             {
-                uxdataGridView.DataSource = RetrieveProductsForDepartmentDataDelegate;
+                var products = repo.RetrieveProducts(2); //Deli's ID = 2
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                }
             }
             else if (ProduceRadioButton.Checked)
             {
-                uxdataGridView.DataSource = RetrieveProductsForDepartmentDataDelegate;
+                var products = repo.RetrieveProducts(1); //Produce's ID = 1
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                }
             }
             else if (BakeryRadioButton.Checked)
             {
-                uxdataGridView.DataSource = RetrieveProductsForDepartmentDataDelegate;
-            }*/
+                var products = repo.RetrieveProducts(4); //Bakery's ID = 4
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                }
+            }
+        }
+
+        private void uxItemUnderQuantity_Click(object sender, EventArgs e)
+        {
+            repo = new SqlProductRepository(connectionString);
+            int quantity = (int)uxNumericUpDown.Value;
+
+            if (DairyRadioButton.Checked)
+            {
+                var products = repo.RetrieveProductsUnderCount(3, quantity);//Deli's ID = 3
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                }
+            }
+            else if (DeliRadioButton.Checked)
+            {
+                var products = repo.RetrieveProducts(2); //Deli's ID = 2
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                }
+            }
+            else if (ProduceRadioButton.Checked)
+            {
+                var products = repo.RetrieveProducts(1); //Produce's ID = 1
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                }
+            }
+            else if (BakeryRadioButton.Checked)
+            {
+                var products = repo.RetrieveProducts(4); //Bakery's ID = 4
+
+                foreach (var y in products)
+                {
+                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                }
+            }
         }
     }
 }
