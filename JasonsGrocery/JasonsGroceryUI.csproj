@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEmployeeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployeeUI.Designer.cs">
+      <DependentUpon>AddEmployeeUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeQueryUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     <Compile Include="SalesQueryUI.Designer.cs">
       <DependentUpon>SalesQueryUI.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddEmployeeUI.resx">
+      <DependentUpon>AddEmployeeUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeQueryUI.resx">
       <DependentUpon>EmployeeQueryUI.cs</DependentUpon>
     </EmbeddedResource>

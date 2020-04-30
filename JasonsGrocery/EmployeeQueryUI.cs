@@ -141,5 +141,16 @@ namespace JasonsGrocery
                     workposition.HourlyPay);
             }
         }
+
+        private void uxAddNewEmployeeButton_Click(object sender, EventArgs e)
+        {
+            AddEmployeeUI addEmployeeUI = new AddEmployeeUI(this);
+            addEmployeeUI.Show();
+        }
+
+        public void addEmployeeInfo(string employeeName, string workPosition, string departmentName, double hourlyPay)
+        {
+            //execute query
+        }
     }
 }
