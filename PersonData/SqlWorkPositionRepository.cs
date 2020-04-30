@@ -3,6 +3,7 @@ using DataAccess;
 using StoreData.Models;
 using WorkPositionData.DataDelegates;
 using System;
+using DepartmentData.DataDelegates;
 
 namespace WorkPositionData
 {
@@ -46,5 +47,11 @@ namespace WorkPositionData
       {
          return executor.ExecuteReader(new RetrieveWorkPositionsDataDelegate());
       }
-   }
+
+      public IReadOnlyList<WorkPosition> RetrieveWorkPositionsAvgSalary()
+      {
+            var d = new RetrieveWorkPositionAvgSalaryDataDelegate();
+            return executor.ExecuteReader(d);
+        }
+    }
 }

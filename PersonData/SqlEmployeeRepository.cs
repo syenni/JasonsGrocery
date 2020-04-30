@@ -47,6 +47,6 @@ namespace EmployeeData
       {
             var d = new RetrieveEmployeesInDepartmentDataDelegate(departmentID);
             return executor.ExecuteReader(d);
-        }
-   }
+      }
+    }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EmployeeData;
+using WorkPositionData;
 
 namespace JasonsGrocery
 {
@@ -17,6 +18,7 @@ namespace JasonsGrocery
         public bool open;
         const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=JasonsGrocery;Integrated Security=SSPI;";
         private IEmployeeRepository repo;
+        private IWorkPositionRepository repo2;
 
         public EmployeeQueryUI(ManagerBaseForm f)
         {
@@ -123,15 +125,21 @@ namespace JasonsGrocery
             }
         }
 
-        private void UxAverageEmployeeSalary_Click(object sender, EventArgs e)
+        private void UxAverageWorkPositionSalary_Click(object sender, EventArgs e)
         {
-            string positionName = uxWorkPositionList.SelectedItem.ToString();
-            repo = new SqlEmployeeRepository(connectionString);
+            //string positionName = uxWorkPositionList.SelectedItem.ToString();
+            repo2 = new SqlWorkPositionRepository(connectionString);
             uxdataGridView.Columns.Clear();
             uxdataGridView.Columns.Add("PositionName", "Position Name");
             uxdataGridView.Columns.Add("Salary", "Average Salary");
-            
 
+            var employees = repo2.RetrieveWorkPositionsAvgSalary();
+
+            foreach(var workposition in employees)
+            {
+                uxdataGridView.Rows.Add(workposition.PositionName,
+                    workposition.HourlyPay);
+            }
         }
     }
 }

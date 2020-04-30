@@ -13,17 +13,19 @@ namespace WorkPositionData
       /// </returns>
       IReadOnlyList<WorkPosition> RetrieveWorkPositions();
 
-      /// <summary>
-      /// Fetches the WorkPosition with the given <paramref name="WorkPositionId"/> if it exists.
-      /// </summary>
-      /// <param name="WorkPositionID">Identifier of the WorkPosition to fetch.</param>
-      /// <returns>
-      /// An instance of <see cref="WorkPosition"/> containing the information of the requested WorkPosition.
-      /// </returns>
-      /// <exception cref="DataAccess.RecordNotFoundException">
-      /// Thrown if <paramref name="WorkPositionId"/> does not exist.
-      /// </exception>
-      WorkPosition FetchWorkPosition(int WorkPositionID);
+      IReadOnlyList<WorkPosition> RetrieveWorkPositionsAvgSalary();
+
+        /// <summary>
+        /// Fetches the WorkPosition with the given <paramref name="WorkPositionId"/> if it exists.
+        /// </summary>
+        /// <param name="WorkPositionID">Identifier of the WorkPosition to fetch.</param>
+        /// <returns>
+        /// An instance of <see cref="WorkPosition"/> containing the information of the requested WorkPosition.
+        /// </returns>
+        /// <exception cref="DataAccess.RecordNotFoundException">
+        /// Thrown if <paramref name="WorkPositionId"/> does not exist.
+        /// </exception>
+        WorkPosition FetchWorkPosition(int WorkPositionID);
 
       /// <summary>
       /// Gets the WorkPosition with the given <paramref name="WorkPositionId"/> if it exists.

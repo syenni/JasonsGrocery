@@ -50,6 +50,7 @@
     <Compile Include="DataDelegates\GetWorkPositionDataDelegate.cs" />
     <Compile Include="DataDelegates\GetEmployeeDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveDailySalesDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrieveWorkPositionAvgSalaryDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveEmployeesInDepartmentDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveTop10ProductsForDepartmentDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveExpensiveProductsForDepartmentDataDelegate.cs" />

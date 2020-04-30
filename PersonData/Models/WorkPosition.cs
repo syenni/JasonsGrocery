@@ -20,5 +20,11 @@ namespace StoreData.Models
             PositionName = positionName;
             WorkPositionType = workPositionType;
         }
+
+        public WorkPosition(string positionName, double avghourlypay)
+        {
+            PositionName = positionName;
+            HourlyPay = avghourlypay;
+        }
     }
 }

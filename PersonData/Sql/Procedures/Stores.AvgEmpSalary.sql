@@ -1,20 +1,19 @@
 ﻿--1R: Average Employee Salary for department....logic in C#
 CREATE OR ALTER PROCEDURE Stores.AvgEmpSalary
-	@PositionName NVARCHAR(32)
 AS
 --DECLARE @PositionName NVARCHAR(32) = N'Manager';
-WITH AVGCTE(EmployeeID, PositionName, HourlyPay) AS
+WITH AVGCTE(EmployeeID, PositionName, AverageEmployeePay) AS
 	(
-		SELECT E.EmployeeID, WP.PositionName, E.HourlyPay
+		SELECT E.EmployeeID, WP.PositionName, 
+		AVG(E.HourlyPay) OVER(
+			PARTITION BY WP.PositionName
+		) AS AverageEmployeePay
 		FROM Stores.Employee E
 			INNER JOIN Stores.WorkPosition WP ON WP.WorkPositionID = E.WorkPositionID
-		WHERE WP.PositionName = @PositionName
 		GROUP BY E.EmployeeID, WP.PositionName, E.HourlyPay
 	)
 SELECT DISTINCT AC.PositionName,
-	AVG(AC.HourlyPay) OVER(
-		PARTITION BY AC.EmployeeID
-	) AS AverageEmployeePay
+	ROUND(AC.AverageEmployeePay, 2) AS AverageHourlyPay
 FROM AVGCTE AC
-GROUP BY AC.PositionName, AC.EmployeeID, AC.HourlyPay
+GROUP BY AC.PositionName, AC.AverageEmployeePay
 ORDER BY PositionName ASC;
