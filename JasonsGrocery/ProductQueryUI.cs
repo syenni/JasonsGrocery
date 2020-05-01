@@ -83,7 +83,7 @@ namespace JasonsGrocery
             repo = new SqlProductRepository(connectionString);
             uxdataGridView.Columns.Clear();
             uxdataGridView.Columns.Add("ProductName", "Product Name");
-            uxdataGridView.Columns.Add("UnitPrice", "Unit Price");
+            uxdataGridView.Columns.Add("StockQuantity", "Quantity in Stock");
 
             if (DairyRadioButton.Checked)
             {
@@ -91,7 +91,7 @@ namespace JasonsGrocery
 
                 foreach (var y in products)
                 {
-                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                    uxdataGridView.Rows.Add(y.ProductName, y.StockQuantity);
                 }
             }
             else if (DeliRadioButton.Checked)
@@ -100,7 +100,7 @@ namespace JasonsGrocery
 
                 foreach (var y in products)
                 {
-                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                    uxdataGridView.Rows.Add(y.ProductName, y.StockQuantity);
                 }
             }
             else if (ProduceRadioButton.Checked)
@@ -109,7 +109,7 @@ namespace JasonsGrocery
 
                 foreach (var y in products)
                 {
-                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                    uxdataGridView.Rows.Add(y.ProductName, y.StockQuantity);
                 }
             }
             else if (BakeryRadioButton.Checked)
@@ -118,7 +118,7 @@ namespace JasonsGrocery
 
                 foreach (var y in products)
                 {
-                    uxdataGridView.Rows.Add(y.ProductName, y.UnitPrice);
+                    uxdataGridView.Rows.Add(y.ProductName, y.StockQuantity);
                 }
             }
         }

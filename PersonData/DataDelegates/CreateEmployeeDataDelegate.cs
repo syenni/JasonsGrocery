@@ -13,16 +13,16 @@ namespace PersonData.DataDelegates
     class CreateEmployeeDataDelegate: NonQueryDataDelegate<Employee>
     {
         private readonly string employeeName;
-        private readonly int workPositionID;
-        private readonly int departmentID;
+        private readonly string workPositionName;
+        private readonly string departmentName;
         private readonly double hourlyPay;
 
-        public CreateEmployeeDataDelegate(string employeeName, int workPosition, int departmentID, double hourlyPay)
-           : base("Person.CreatePerson")
+        public CreateEmployeeDataDelegate(string employeeName, string workPositionName, string departmentName, double hourlyPay)
+           : base("Stores.CreateEmployee")
         {
             this.employeeName = employeeName;
-            this.workPositionID = workPosition;
-            this.departmentID = departmentID;
+            this.workPositionName = workPositionName;
+            this.departmentName = departmentName;
             this.hourlyPay = hourlyPay;
         }
 
@@ -30,21 +30,25 @@ namespace PersonData.DataDelegates
         {
             base.PrepareCommand(command);
 
-            var p = command.Parameters.AddWithValue("EmployeeName", employeeName);
+            var p = command.Parameters.Add("PositionName", SqlDbType.NVarChar);
+            p.Value = workPositionName;
 
-            p = command.Parameters.AddWithValue("WorkPositionID", workPositionID);
+            p = command.Parameters.Add("DepartmentName", SqlDbType.NVarChar);
+            p.Value = departmentName;
 
-            p = command.Parameters.AddWithValue("DepartmentID", departmentID);
+            p = command.Parameters.Add("HourlyPay", SqlDbType.Float);
+            p.Value = hourlyPay;
 
-            p = command.Parameters.AddWithValue("HourlyPay", hourlyPay);
+            p = command.Parameters.Add("EmployeeName", SqlDbType.NVarChar);
+            p.Value = employeeName;
 
-            p = command.Parameters.Add("EmployeeId", SqlDbType.Int);
+            p = command.Parameters.Add("EmployeeID", SqlDbType.Int);
             p.Direction = ParameterDirection.Output;
         }
 
         public override Employee Translate(SqlCommand command)
         {
-            return new Employee((int)command.Parameters["EmployeeId"].Value, employeeName, workPositionID, departmentID, hourlyPay);
+            return new Employee((int)command.Parameters["EmployeeID"].Value, workPositionName, departmentName, hourlyPay, employeeName);
         }
     }
 }

@@ -23,8 +23,8 @@ namespace JasonsGrocery
 
         private void uxAddEmployeeButton_Click(object sender, EventArgs e)
         {
-            employeeQueryUI.addEmployeeInfo(uxEmployeeNameTextBox.Text, uxWorkPositionComboBox.SelectedIndex.ToString(),
-                uxDeparmentNameComboBox.SelectedIndex.ToString(), (double)uxHourlyPayNumericUpDown.Value);
+            employeeQueryUI.addEmployeeInfo(uxEmployeeNameTextBox.Text, uxWorkPositionComboBox.SelectedItem.ToString(),
+                uxDeparmentNameComboBox.SelectedItem.ToString(), (double)uxHourlyPayNumericUpDown.Value);
             employeeQueryUI.Enabled = true;
             Close();
         }

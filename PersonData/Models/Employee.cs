@@ -24,12 +24,12 @@ namespace StoreData.Models
             PositionName = positionName;
         }
 
-        public Employee(int employeeID, string employeeName, int workPositionID, int departmentID, double hourlyPay)
+        public Employee(int employeeID, string workPositionName, string departmentName, double hourlyPay, string employeeName)
         {
             EmployeeID = employeeID;
             EmployeeName = employeeName;
-            WorkPositionID = workPositionID;
-            DepartmentID = departmentID;
+            PositionName = workPositionName;
+            DepartmentName = departmentName;
             HourlyPay = hourlyPay;
         }
     }

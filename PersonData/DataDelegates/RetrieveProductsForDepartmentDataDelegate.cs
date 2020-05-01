@@ -32,11 +32,10 @@ namespace DepartmentData.DataDelegates
          {
                 //product just product id and name (match with select in query)
                 Products.Add(new Product(
-                    departmentID,
-                    reader.GetValue<double>("UnitPrice"),
+                    reader.GetInt32("StockQuantity"),
                     reader.GetString("ProductName")
                     ));
-         }
+            }
 
          return Products;
       }

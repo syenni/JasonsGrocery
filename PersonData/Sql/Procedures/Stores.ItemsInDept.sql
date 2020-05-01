@@ -2,7 +2,7 @@
 CREATE OR ALTER PROCEDURE Stores.ItemsInDept
    @DepartmentID INT
 AS
-SELECT D.DepartmentID, P.ProductName, P.UnitPrice
+SELECT P.ProductName, P.StockQuantity
 FROM Stores.Department D
 	INNER JOIN Stores.Product P ON P.DepartmentID = D.DepartmentID
 WHERE D.DepartmentID = @DepartmentID

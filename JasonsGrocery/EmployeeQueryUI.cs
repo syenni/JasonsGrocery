@@ -151,7 +151,7 @@ namespace JasonsGrocery
 
         public void addEmployeeInfo(string employeeName, string workPosition, string departmentName, double hourlyPay)
         {
-            int workPositionID = 0;
+            /*int workPositionID = 0;
             switch(workPosition)
             {
                 case "Manager":
@@ -189,26 +189,26 @@ namespace JasonsGrocery
                 case "Dairy":
                     departmentID = (int)DepartmentType.Dairy;
                     break;
-            }
+            }*/
             //execute query
             repo = new SqlEmployeeRepository(connectionString);
             uxdataGridView.Columns.Clear();
-            var employee = repo.CreateEmployee(employeeName, workPositionID, departmentID, hourlyPay);
+            var employee = repo.CreateEmployee(employeeName, workPosition, departmentName, hourlyPay);
             if (employee != null)
             {
-                if (departmentID == 1)
+                if (departmentName.Equals("Produce"))
                 {
                     MessageBox.Show("Employee Added Successfully to Produce Department");
                 }
-                else if (departmentID == 2)
+                else if (departmentName.Equals("Deli"))
                 {
                     MessageBox.Show("Employee Added Successfully to Deli Department");
                 }
-                else if (departmentID == 3)
+                else if (departmentName.Equals("Dairy"))
                 {
                     MessageBox.Show("Employee Added Successfully to Dairy Department");
                 }
-                else if (departmentID == 4)
+                else if (departmentName.Equals("Bakery"))
                 {
                     MessageBox.Show("Employee Added Successfully to Bakery Department");
                 }

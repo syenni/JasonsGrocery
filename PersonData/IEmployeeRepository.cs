@@ -45,6 +45,6 @@ namespace EmployeeData
         /// <returns>
         /// The resulting instance of <see cref="Employee"/>.
         /// </returns>
-      Employee CreateEmployee(string employeeName, int workPositionID, int departmentID, double hourlyPay);
+      Employee CreateEmployee(string employeeName, string workPositionName, string departmentName, double hourlyPay);
    }
 }

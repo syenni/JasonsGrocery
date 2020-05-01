@@ -29,12 +29,18 @@ namespace EmployeeData
             return executor.ExecuteReader(d);
         }
 
-        public Employee CreateEmployee(string employeeName, int workPositionID, int departmentID, double hourlyPay)
+        public Employee CreateEmployee(string employeeName, string workPositionName, string departmentName, double hourlyPay)
         {
             if (string.IsNullOrWhiteSpace(employeeName))
             throw new ArgumentException("The parameter cannot be null or empty.", nameof(employeeName));
 
-            var d = new CreateEmployeeDataDelegate(employeeName, workPositionID, departmentID, hourlyPay);
+            if (string.IsNullOrWhiteSpace(workPositionName))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(workPositionName));
+
+            if (string.IsNullOrWhiteSpace(departmentName))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(departmentName));
+
+            var d = new CreateEmployeeDataDelegate(employeeName, workPositionName, departmentName, hourlyPay);
             return executor.ExecuteNonQuery(d);
         }
 

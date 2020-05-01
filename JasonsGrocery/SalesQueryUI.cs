@@ -57,8 +57,8 @@ namespace JasonsGrocery
             {
                 uxdataGridView.Rows.Add(sale.ProductName,
                     sale.AmountOfProductsSold,
-                    sale.UnitPrice,
-                    sale.TotalSales);
+                    "$"+ sale.UnitPrice,
+                    "$"+sale.TotalSales);
             }
         }
     }

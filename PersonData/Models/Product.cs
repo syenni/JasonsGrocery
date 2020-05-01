@@ -33,15 +33,22 @@ namespace StoreData.Models
             this.ProductName = productName;
         }
 
-        public Product(string departmentName, int quantity, string productName)
+        public Product(int departmentID, string productName, int quantity)
         {
-            this.DepartmentName = departmentName;
+            this.DepartmentID = departmentID;
             this.StockQuantity = quantity;
             this.ProductName = productName;
         }
 
         public Product(int quantity, string productName)
         {
+            this.StockQuantity = quantity;
+            this.ProductName = productName;
+        }
+
+        public Product(string departmentName, int quantity, string productName)
+        {
+            this.DepartmentName = departmentName;
             this.StockQuantity = quantity;
             this.ProductName = productName;
         }
