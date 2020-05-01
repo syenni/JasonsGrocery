@@ -442,6 +442,6 @@ UPDATE P
 SET	
 	StockQuantity -= TD20.ItemQuantity
 FROM Stores.Product P
-	RIGHT JOIN Stores.TransactionDetails TD20 ON TD18.ProductID = P.ProductID
+	RIGHT JOIN Stores.TransactionDetails TD20 ON TD20.ProductID = P.ProductID
 	INNER JOIN Stores.[Transaction] T ON T.TransactionID = TD20.TransactionID
 WHERE T.TransactionID = 20;
