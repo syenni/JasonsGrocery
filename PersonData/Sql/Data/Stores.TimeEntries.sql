@@ -23,11 +23,11 @@ SELECT E.EmployeeID, T.ClockIn, T.ClockOut
 FROM 
 	(
 		VALUES
-			(N'Jason Byrne', @ClockIn2, @ClockOut2)
-			(N'Kate Upton', '2020-04-14 08:30:00', '2020-04-14 08:30:00')
-			(N'Kate Upton', '2020-04-15 08:30:00', '2020-04-15 08:30:00')
-			(N'Kate Upton', '2020-04-16 08:30:00', '2020-04-16 08:30:00')
-			(N'Kate Upton', '2020-04-17 08:30:00', '2020-04-17 08:30:00')
+			(N'Jason Byrne', @ClockIn2, @ClockOut2),
+			(N'Kate Upton', '2020-04-14 08:30:00', '2020-04-14 08:30:00'),
+			(N'Kate Upton', '2020-04-15 08:30:00', '2020-04-15 08:30:00'),
+			(N'Kate Upton', '2020-04-16 08:30:00', '2020-04-16 08:30:00'),
+			(N'Kate Upton', '2020-04-17 08:30:00', '2020-04-17 08:30:00'),
 			(N'Kate Upton', '2020-04-18 08:30:00', '2020-04-18 08:30:00')
 			
 	) T(EmployeeName, ClockIn, ClockOut)
@@ -38,11 +38,11 @@ SELECT E.EmployeeID, T.ClockIn, T.ClockOut
 FROM 
 	(
 		VALUES
-			(N'Jason Byrne', @ClockIn2, @ClockOut2)
-			(N'Kate Upton', '2020-04-14 08:30:00', '2020-04-14 08:30:00')
-			(N'Kate Upton', '2020-04-15 08:30:00', '2020-04-15 08:30:00')
-			(N'Kate Upton', '2020-04-16 08:30:00', '2020-04-16 08:30:00')
-			(N'Kate Upton', '2020-04-17 08:30:00', '2020-04-17 08:30:00')
+			(N'Jason Byrne', @ClockIn2, @ClockOut2),
+			(N'Kate Upton', '2020-04-14 08:30:00', '2020-04-14 08:30:00'),
+			(N'Kate Upton', '2020-04-15 08:30:00', '2020-04-15 08:30:00'),
+			(N'Kate Upton', '2020-04-16 08:30:00', '2020-04-16 08:30:00'),
+			(N'Kate Upton', '2020-04-17 08:30:00', '2020-04-17 08:30:00'),
 			(N'Kate Upton', '2020-04-18 08:30:00', '2020-04-18 08:30:00')
 			
 	) T(EmployeeName, ClockIn, ClockOut)
@@ -53,11 +53,11 @@ SELECT E.EmployeeID, T.ClockIn, T.ClockOut
 FROM 
 	(
 		VALUES
-			(N'Jason Byrne', @ClockIn2, @ClockOut2)
-			(N'Kate Upton', '2020-04-14 08:30:00', '2020-04-14 08:30:00')
-			(N'Kate Upton', '2020-04-15 08:30:00', '2020-04-15 08:30:00')
-			(N'Kate Upton', '2020-04-16 08:30:00', '2020-04-16 08:30:00')
-			(N'Kate Upton', '2020-04-17 08:30:00', '2020-04-17 08:30:00')
+			(N'Jason Byrne', @ClockIn2, @ClockOut2),
+			(N'Kate Upton', '2020-04-14 08:30:00', '2020-04-14 08:30:00'),
+			(N'Kate Upton', '2020-04-15 08:30:00', '2020-04-15 08:30:00'),
+			(N'Kate Upton', '2020-04-16 08:30:00', '2020-04-16 08:30:00'),
+			(N'Kate Upton', '2020-04-17 08:30:00', '2020-04-17 08:30:00'),
 			(N'Kate Upton', '2020-04-18 08:30:00', '2020-04-18 08:30:00')
 			
 	) T(EmployeeName, ClockIn, ClockOut)
