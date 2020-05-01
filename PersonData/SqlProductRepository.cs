@@ -67,7 +67,7 @@ namespace DepartmentData
         public IReadOnlyList<Product> RetrieveTop10Products(int departmentID)
         {
             //return executor.ExecuteReader(new RetrieveProductsForDepartmentDataDelegate(ProductID);
-            var d = new RetrieveTop10ProductsForDepartmentDataDelegate(departmentID);
+            var d = new RetrieveTop5ProductsForDepartmentDataDelegate(departmentID);
             return executor.ExecuteReader(d);
         }
     }

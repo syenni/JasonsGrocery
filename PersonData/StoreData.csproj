@@ -53,7 +53,7 @@
     <Compile Include="DataDelegates\RetrieveDailySalesDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveWorkPositionAvgSalaryDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveEmployeesInDepartmentDataDelegate.cs" />
-    <Compile Include="DataDelegates\RetrieveTop10ProductsForDepartmentDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrieveTop5ProductsForDepartmentDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveExpensiveProductsForDepartmentDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveProductsForDepartmentUnderCountDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveWorkPositionsDataDelegate.cs" />
@@ -112,7 +112,7 @@
     <EmbeddedResource Include="Sql\Schemas\Stores.sql" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Sql\Procedures\Stores.Top10Products.sql" />
+    <EmbeddedResource Include="Sql\Procedures\Stores.Top5Products.sql" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Sql\Procedures\Stores.HoursWorked.sql" />

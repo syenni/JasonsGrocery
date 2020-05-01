@@ -50,6 +50,7 @@
             // 
             // uxCheckItemStock
             // 
+            this.uxCheckItemStock.Enabled = false;
             this.uxCheckItemStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxCheckItemStock.Location = new System.Drawing.Point(24, 97);
             this.uxCheckItemStock.Margin = new System.Windows.Forms.Padding(4);
@@ -186,13 +187,14 @@
             // 
             // uxTopProducts
             // 
+            this.uxTopProducts.Enabled = false;
             this.uxTopProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxTopProducts.Location = new System.Drawing.Point(24, 223);
             this.uxTopProducts.Margin = new System.Windows.Forms.Padding(4);
             this.uxTopProducts.Name = "uxTopProducts";
             this.uxTopProducts.Size = new System.Drawing.Size(173, 64);
             this.uxTopProducts.TabIndex = 16;
-            this.uxTopProducts.Text = "Top 10 Products";
+            this.uxTopProducts.Text = "Top 5 Products";
             this.uxTopProducts.UseVisualStyleBackColor = true;
             this.uxTopProducts.Click += new System.EventHandler(this.UxTopProducts_Click);
             // 
@@ -206,6 +208,7 @@
             // 
             // uxExpensiveItems
             // 
+            this.uxExpensiveItems.Enabled = false;
             this.uxExpensiveItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxExpensiveItems.Location = new System.Drawing.Point(24, 151);
             this.uxExpensiveItems.Margin = new System.Windows.Forms.Padding(4);

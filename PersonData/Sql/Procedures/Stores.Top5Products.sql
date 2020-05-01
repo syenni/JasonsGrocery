@@ -1,5 +1,5 @@
-﻿--2R: top 10 products
-CREATE OR ALTER PROCEDURE Stores.Top10Products
+﻿--2R: top 5 products
+CREATE OR ALTER PROCEDURE Stores.Top5Products
    @DepartmentID INT
 AS
 WITH TopProdCTE(ProductID, ProductName, QuantitySold) AS
@@ -14,6 +14,6 @@ WITH TopProdCTE(ProductID, ProductName, QuantitySold) AS
 		WHERE D.DepartmentID = @DepartmentID
 		GROUP BY P.ProductID, P.ProductName, TD.ItemQuantity
 	)
-SELECT TOP 10 TP.ProductName, TP.QuantitySold
+SELECT TOP 5 TP.ProductName, TP.QuantitySold
 FROM TopProdCTE TP
 ORDER BY QuantitySold DESC, ProductName ASC;
