@@ -195,7 +195,7 @@ FROM
 SELECT*
 FROM Stores.[Transaction] T;
 
---transaction 15
+--transaction 17
 INSERT Stores.[Transaction](StoreID, PurchasedOn)
 SELECT S.StoreID, T.PurchasedOn
 FROM 
@@ -207,7 +207,7 @@ FROM
 SELECT*
 FROM Stores.[Transaction] T;
 
---transaction 16
+--transaction 18
 INSERT Stores.[Transaction](StoreID, PurchasedOn)
 SELECT S.StoreID, T.PurchasedOn
 FROM 
@@ -219,7 +219,7 @@ FROM
 SELECT*
 FROM Stores.[Transaction] T;
 
---transaction 17
+--transaction 19
 INSERT Stores.[Transaction](StoreID, PurchasedOn)
 SELECT S.StoreID, T.PurchasedOn
 FROM 
@@ -231,37 +231,13 @@ FROM
 SELECT*
 FROM Stores.[Transaction] T;
 
---transaction 18
-INSERT Stores.[Transaction](StoreID, PurchasedOn)
-SELECT S.StoreID, T.PurchasedOn
-FROM 
-	(
-		VALUES	
-			(N'Jason''s Grocery Store', '2020-04-30 12:20:00')
-	)T(StoreName, PurchasedOn)
-	INNER JOIN Stores.Store S ON S.StoreName = T.StoreName;
-SELECT*
-FROM Stores.[Transaction] T;
-
---transaction 19
-INSERT Stores.[Transaction](StoreID, PurchasedOn)
-SELECT S.StoreID, T.PurchasedOn
-FROM 
-	(
-		VALUES	
-			(N'Jason''s Grocery Store', '2020-04-30 14:20:00')
-	)T(StoreName, PurchasedOn)
-	INNER JOIN Stores.Store S ON S.StoreName = T.StoreName;
-SELECT*
-FROM Stores.[Transaction] T;
-
 --transaction 20
 INSERT Stores.[Transaction](StoreID, PurchasedOn)
 SELECT S.StoreID, T.PurchasedOn
 FROM 
 	(
 		VALUES	
-			(N'Jason''s Grocery Store', '2020-04-30 16:15:00')
+			(N'Jason''s Grocery Store', '2020-04-30 12:20:00')
 	)T(StoreName, PurchasedOn)
 	INNER JOIN Stores.Store S ON S.StoreName = T.StoreName;
 SELECT*
