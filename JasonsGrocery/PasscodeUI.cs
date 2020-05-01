@@ -12,13 +12,11 @@ namespace JasonsGrocery
 {
     public partial class PasscodeUI : Form
     {
-        MainForm form;
         private string passcode = "1234";
 
-        public PasscodeUI(MainForm f)
+        public PasscodeUI()
         {
             InitializeComponent();
-            form = f;
         }
 
         private void LogInButton_Click(object sender, EventArgs e)
@@ -30,14 +28,13 @@ namespace JasonsGrocery
             }
             else
             {
-                form.Show();
-                this.Hide();
+                PasscodeIDTextbox.Clear();
             }
         }
 
         private void PasscodeUI_FormClosing(object sender, FormClosingEventArgs e)
         {
-            form.Close();
+            
         }
     }
 }

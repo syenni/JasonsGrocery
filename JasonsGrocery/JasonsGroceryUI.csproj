@@ -64,19 +64,6 @@
     <Compile Include="PasscodeUI.Designer.cs">
       <DependentUpon>PasscodeUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include=".Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmployeeUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmployeeUI.Designer.cs">
-      <DependentUpon>EmployeeUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="ManagerBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,12 +92,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PasscodeUI.resx">
       <DependentUpon>PasscodeUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeUI.resx">
-      <DependentUpon>EmployeeUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerBaseForm.resx">
       <DependentUpon>ManagerBaseForm.cs</DependentUpon>
