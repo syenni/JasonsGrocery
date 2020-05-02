@@ -51,14 +51,21 @@ namespace JasonsGrocery
             uxdataGridView.Columns.Add("UnitPrice", "Unit Price");
             uxdataGridView.Columns.Add("TotalSales", "Total Sales");
 
-            var sales = repo.RetrieveDailySales(date); 
+            var sales = repo.RetrieveDailySales(date);
 
-            foreach(var sale in sales)
+            if (sales.Count == 0)
             {
-                uxdataGridView.Rows.Add(sale.ProductName,
-                    sale.AmountOfProductsSold,
-                    "$"+ sale.UnitPrice,
-                    "$"+sale.TotalSales);
+                MessageBox.Show("No transactions were made on " + uxdateTimePicker.Value.ToShortDateString());
+            }
+            else
+            {
+                foreach (var sale in sales)
+                {
+                    uxdataGridView.Rows.Add(sale.ProductName,
+                        sale.AmountOfProductsSold,
+                        "$" + sale.UnitPrice,
+                        "$" + sale.TotalSales);
+                }
             }
         }
     }

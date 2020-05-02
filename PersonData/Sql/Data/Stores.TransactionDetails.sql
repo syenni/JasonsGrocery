@@ -2,7 +2,6 @@
 FROM Stores.TransactionDetails
 /***************************** Modify values here *****************************/
 
-
 --insert the transaction details for that each using a scope indentity for the transactionId
 INSERT Stores.TransactionDetails(TransactionID, ProductID, StoreID, UnitPrice, ItemQuantity)
 SELECT TD.TransactionID, P.ProductID, P.StoreID, P.UnitPrice, TD.ItemQuantity
@@ -105,20 +104,110 @@ FROM
 			(23, N'California Roll', 2),
 
 			(24, N'Chocolate Chip Muffins', 5),
-			(24, N'Sugar Cookies', 10)
+			(24, N'Sugar Cookies', 10),
 
+			(25, N'Colby Jack Cheese', 2),
+			(25, N'Swiss Cheese', 2),
+			(25, N'Beef', 5),
+			(25, N'Turkey', 2),
+			(25, N'Wheat Bread', 6),
+
+			(26, N'Cottage Cheese', 6),
+
+			(27, N'Rocky Road Ice Cream', 3),
+			(27, N'Vanilla Ice Cream', 3),
+
+			(28, N'Turkey', 3),
+			(28, N'Chicken', 1),
+
+			(29, N'Milk', 2),
+			(29, N'Bananas', 4),
+			(29, N'Yogurt', 10),
+
+			(30, N'Chobani Yogurt', 3),
+			(30, N'Corn', 2),
+			(30, N'Cucumbers', 4),
+			(30, N'Onions', 3),
+			(30, N'Potatoes', 2),
+
+			(31, N'Sour Cream', 15),
+
+			(32, N'Strawberries', 5),
+			(32, N'Oranges', 5),
+			(32, N'Kiwis', 5),
+			(32, N'Milk', 2),
+
+			(33, N'Dynamite Roll', 2),
+			(33, N'California Roll', 2),
+
+			(34, N'Chocolate Chip Cookie Dough Ice Cream', 3),
+
+			(35, N'Tomatoes', 3),
+			(35, N'Celery', 2),
+
+			(36, N'Provolone Cheese', 6),
+
+			(37, N'Milk', 1),
+			(37, N'Bananas', 5),
+			(37, N'Yogurt', 3),
+
+			(38, N'Butter', 2),
+
+			(39, N'Chicken', 2),
+			(39, N'Ham', 2),
+			(39, N'Turkey', 2),
+			(39, N'Beef', 2),
+			(29, N'Colby Jack Cheese', 2),
+			(39, N'Swiss Cheese', 2),
+			(29, N'PepperJack Cheese', 2),
+			(39, N'Provolone Cheese', 2),
+			(39, N'White Bread', 2),
+			(39, N'Wheat Bread', 2),
+			(39, N'French Bread', 2),
+
+			(40, N'Raisin Cookies', 2),
+
+			(41, N'Orange Sherbet', 1),
+			(41, N'Rocky Road Ice Cream', 1),
+
+			(42, N'Chocolate Ice Cream', 3),
+			(42, N'Double Chocolate Chip Cookies', 5),
+
+			(43, N'Milk', 1),
+			(43, N'Apples', 5),
+
+			(44, N'Chocolate Chip Muffins', 1),
+			(44, N'Blueberry Muffins', 1),
+			(44, N'Banana Nut Muffins', 1),
+
+			(45, N'Yogurt', 4),
+			(45, N'Apples', 2),
+
+			(46, N'Turkey', 5),
+
+			(47, N'Celery', 10),
+
+			(48, N'Peppers', 5),
+			(48, N'Sour Cream', 3),
+
+			(49,  N'California Roll', 5),
+			(49, N'Dynamite Roll', 5),
+
+			(50, N'Vanilla Ice Cream', 2),
+
+			(51, N'Butter', 1),
+
+			(52, N'Milk', 1)
 	) TD(TransactionID, ProductName, ItemQuantity)
 	INNER JOIN Stores.Product P ON P.ProductName = TD.ProductName
 	--INNER JOIN Stores.[Transaction] T ON T.StoreID = TD.StoreID
 --GROUP BY T.TransactionID, P.ProductID, P.StoreID, TD.ItemQuantity;
 
---update after transaction 1
+--update products for each transaction
 UPDATE P 
 SET	
 	StockQuantity -= TD.ItemQuantity
 FROM Stores.Product P
 	RIGHT JOIN Stores.TransactionDetails TD ON TD.ProductID = P.ProductID
 	INNER JOIN Stores.[Transaction] T ON T.TransactionID = TD.TransactionID
---WHERE T.TransactionID = 1;
 /******************************************************************************/
---insert the transaction details for transaction 2 using a scope indentity for the transactionId
