@@ -4,7 +4,7 @@ CREATE OR ALTER PROCEDURE Stores.DailySales
 AS
 WITH DailySales(ProductName, ItemQuantity, UnitPrice) AS
 	(
-		SELECT P.ProductName, TD.ItemQuantity, TD.UnitPrice
+		SELECT P.ProductName, TD.ItemQuantity, P.UnitPrice
 		FROM Stores.Product P
 			INNER JOIN Stores.TransactionDetails TD On TD.ProductID = P.ProductID
 			INNER JOIN Stores.[Transaction] T ON T.TransactionID = TD.TransactionID

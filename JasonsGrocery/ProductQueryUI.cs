@@ -55,21 +55,33 @@ namespace JasonsGrocery
         private void ProduceRadioButton_Click(object sender, EventArgs e)
         {
             UncheckRadioButtons(ProduceRadioButton);
+            uxExpensiveItems.Enabled = true;
+            uxCheckItemStock.Enabled = true;
+            uxTopProducts.Enabled = true;
         }
 
         private void BakeryRadioButton_Click(object sender, EventArgs e)
         {
             UncheckRadioButtons(BakeryRadioButton);
+            uxExpensiveItems.Enabled = true;
+            uxCheckItemStock.Enabled = true;
+            uxTopProducts.Enabled = true;
         }
 
         private void DairyRadioButton_Click(object sender, EventArgs e)
         {
             UncheckRadioButtons(DairyRadioButton);
+            uxExpensiveItems.Enabled = true;
+            uxCheckItemStock.Enabled = true;
+            uxTopProducts.Enabled = true;
         }
 
         private void DeliRadioButton_Click(object sender, EventArgs e)
         {
             UncheckRadioButtons(DeliRadioButton);
+            uxExpensiveItems.Enabled = true;
+            uxCheckItemStock.Enabled = true;
+            uxTopProducts.Enabled = true;
         }
 
         private void ManagerUI_FormClosed(object sender, FormClosedEventArgs e)

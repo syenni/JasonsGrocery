@@ -51,5 +51,10 @@ namespace JasonsGrocery
             uxHourlyPayNumericUpDown.Enabled = true;
             uxAddEmployeeButton.Enabled = true;
         }
+
+        private void AddEmployeeUI_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            employeeQueryUI.Enabled = true;
+        }
     }
 }

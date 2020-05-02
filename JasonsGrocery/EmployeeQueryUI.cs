@@ -216,5 +216,25 @@ namespace JasonsGrocery
             else MessageBox.Show("Error in adding Employee");
 
         }
+
+        private void DeliRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            uxListOfEmployees.Enabled = true;
+        }
+
+        private void ProduceRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            uxListOfEmployees.Enabled = true;
+        }
+
+        private void DairyRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            uxListOfEmployees.Enabled = true;
+        }
+
+        private void BakeryRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            uxListOfEmployees.Enabled = true;
+        }
     }
 }

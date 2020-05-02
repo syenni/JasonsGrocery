@@ -6,12 +6,12 @@ using System.Data.SqlClient;
 
 namespace DepartmentData.DataDelegates
 {
-   internal class RetrieveTop10ProductsForDepartmentDataDelegate : DataReaderDelegate<IReadOnlyList<Product>>
+   internal class RetrieveTop5ProductsForDepartmentDataDelegate : DataReaderDelegate<IReadOnlyList<Product>>
    {
       private readonly int departmentID;
 
-      public RetrieveTop10ProductsForDepartmentDataDelegate(int departmentID)
-         : base("Stores.Top10Products") //name of procedure
+      public RetrieveTop5ProductsForDepartmentDataDelegate(int departmentID)
+         : base("Stores.Top5Products") //name of procedure
       {
             this.departmentID = departmentID;
       }

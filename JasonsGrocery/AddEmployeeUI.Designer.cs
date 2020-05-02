@@ -52,10 +52,10 @@
             "Janitor",
             "Director",
             "Cashier"});
-            this.uxWorkPositionComboBox.Location = new System.Drawing.Point(111, 71);
-            this.uxWorkPositionComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.uxWorkPositionComboBox.Location = new System.Drawing.Point(148, 87);
+            this.uxWorkPositionComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uxWorkPositionComboBox.Name = "uxWorkPositionComboBox";
-            this.uxWorkPositionComboBox.Size = new System.Drawing.Size(79, 24);
+            this.uxWorkPositionComboBox.Size = new System.Drawing.Size(104, 28);
             this.uxWorkPositionComboBox.TabIndex = 19;
             this.uxWorkPositionComboBox.SelectedIndexChanged += new System.EventHandler(this.uxWorkPositionComboBox_SelectedIndexChanged);
             // 
@@ -69,15 +69,15 @@
             0,
             0,
             131072});
-            this.uxHourlyPayNumericUpDown.Location = new System.Drawing.Point(111, 105);
-            this.uxHourlyPayNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
+            this.uxHourlyPayNumericUpDown.Location = new System.Drawing.Point(148, 129);
+            this.uxHourlyPayNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uxHourlyPayNumericUpDown.Minimum = new decimal(new int[] {
             8,
             0,
             0,
             0});
             this.uxHourlyPayNumericUpDown.Name = "uxHourlyPayNumericUpDown";
-            this.uxHourlyPayNumericUpDown.Size = new System.Drawing.Size(78, 22);
+            this.uxHourlyPayNumericUpDown.Size = new System.Drawing.Size(104, 26);
             this.uxHourlyPayNumericUpDown.TabIndex = 17;
             this.uxHourlyPayNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.uxHourlyPayNumericUpDown.Value = new decimal(new int[] {
@@ -90,10 +90,9 @@
             // 
             this.uxHourlyPayLabel.AutoSize = true;
             this.uxHourlyPayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxHourlyPayLabel.Location = new System.Drawing.Point(29, 107);
-            this.uxHourlyPayLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.uxHourlyPayLabel.Location = new System.Drawing.Point(39, 132);
             this.uxHourlyPayLabel.Name = "uxHourlyPayLabel";
-            this.uxHourlyPayLabel.Size = new System.Drawing.Size(77, 16);
+            this.uxHourlyPayLabel.Size = new System.Drawing.Size(96, 20);
             this.uxHourlyPayLabel.TabIndex = 18;
             this.uxHourlyPayLabel.Text = "Hourly Pay:";
             // 
@@ -101,18 +100,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 9);
+            this.label1.Location = new System.Drawing.Point(76, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 16);
+            this.label1.Size = new System.Drawing.Size(58, 20);
             this.label1.TabIndex = 20;
             this.label1.Text = "Name:";
             // 
             // uxEmployeeNameTextBox
             // 
             this.uxEmployeeNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxEmployeeNameTextBox.Location = new System.Drawing.Point(111, 6);
+            this.uxEmployeeNameTextBox.Location = new System.Drawing.Point(148, 7);
+            this.uxEmployeeNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uxEmployeeNameTextBox.Name = "uxEmployeeNameTextBox";
-            this.uxEmployeeNameTextBox.Size = new System.Drawing.Size(78, 22);
+            this.uxEmployeeNameTextBox.Size = new System.Drawing.Size(103, 26);
             this.uxEmployeeNameTextBox.TabIndex = 21;
             this.uxEmployeeNameTextBox.TextChanged += new System.EventHandler(this.uxEmployeeNameTextBox_TextChanged);
             // 
@@ -120,9 +121,10 @@
             // 
             this.uxWorkPositionLabel.AutoSize = true;
             this.uxWorkPositionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxWorkPositionLabel.Location = new System.Drawing.Point(12, 74);
+            this.uxWorkPositionLabel.Location = new System.Drawing.Point(16, 91);
+            this.uxWorkPositionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uxWorkPositionLabel.Name = "uxWorkPositionLabel";
-            this.uxWorkPositionLabel.Size = new System.Drawing.Size(94, 16);
+            this.uxWorkPositionLabel.Size = new System.Drawing.Size(118, 20);
             this.uxWorkPositionLabel.TabIndex = 22;
             this.uxWorkPositionLabel.Text = "Work Position:";
             // 
@@ -130,9 +132,10 @@
             // 
             this.uxDepartmentNameLabel.AutoSize = true;
             this.uxDepartmentNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDepartmentNameLabel.Location = new System.Drawing.Point(25, 41);
+            this.uxDepartmentNameLabel.Location = new System.Drawing.Point(33, 50);
+            this.uxDepartmentNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uxDepartmentNameLabel.Name = "uxDepartmentNameLabel";
-            this.uxDepartmentNameLabel.Size = new System.Drawing.Size(81, 16);
+            this.uxDepartmentNameLabel.Size = new System.Drawing.Size(102, 20);
             this.uxDepartmentNameLabel.TabIndex = 24;
             this.uxDepartmentNameLabel.Text = "Department:";
             // 
@@ -146,10 +149,10 @@
             "Deli",
             "Bakery",
             "Produce"});
-            this.uxDeparmentNameComboBox.Location = new System.Drawing.Point(111, 38);
-            this.uxDeparmentNameComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.uxDeparmentNameComboBox.Location = new System.Drawing.Point(148, 47);
+            this.uxDeparmentNameComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uxDeparmentNameComboBox.Name = "uxDeparmentNameComboBox";
-            this.uxDeparmentNameComboBox.Size = new System.Drawing.Size(78, 24);
+            this.uxDeparmentNameComboBox.Size = new System.Drawing.Size(103, 28);
             this.uxDeparmentNameComboBox.TabIndex = 23;
             this.uxDeparmentNameComboBox.SelectedIndexChanged += new System.EventHandler(this.uxDeparmentNameComboBox_SelectedIndexChanged);
             // 
@@ -157,9 +160,10 @@
             // 
             this.uxAddEmployeeButton.Enabled = false;
             this.uxAddEmployeeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxAddEmployeeButton.Location = new System.Drawing.Point(19, 132);
+            this.uxAddEmployeeButton.Location = new System.Drawing.Point(25, 162);
+            this.uxAddEmployeeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uxAddEmployeeButton.Name = "uxAddEmployeeButton";
-            this.uxAddEmployeeButton.Size = new System.Drawing.Size(174, 23);
+            this.uxAddEmployeeButton.Size = new System.Drawing.Size(232, 28);
             this.uxAddEmployeeButton.TabIndex = 25;
             this.uxAddEmployeeButton.Text = "Add Employee";
             this.uxAddEmployeeButton.UseVisualStyleBackColor = true;
@@ -167,9 +171,9 @@
             // 
             // AddEmployeeUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(212, 165);
+            this.ClientSize = new System.Drawing.Size(283, 203);
             this.Controls.Add(this.uxAddEmployeeButton);
             this.Controls.Add(this.uxDepartmentNameLabel);
             this.Controls.Add(this.uxDeparmentNameComboBox);
@@ -179,8 +183,10 @@
             this.Controls.Add(this.uxWorkPositionComboBox);
             this.Controls.Add(this.uxHourlyPayNumericUpDown);
             this.Controls.Add(this.uxHourlyPayLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddEmployeeUI";
             this.Text = "AddEmployeeUI";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddEmployeeUI_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.uxHourlyPayNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
