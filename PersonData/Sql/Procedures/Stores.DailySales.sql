@@ -6,7 +6,7 @@ WITH DailySales(ProductName, ItemQuantity, UnitPrice) AS
 	(
 		SELECT P.ProductName, TD.ItemQuantity, TD.UnitPrice
 		FROM Stores.Product P
-			RIGHT JOIN Stores.TransactionDetails TD ON TD.ProductID = P.ProductID
+			INNER JOIN Stores.TransactionDetails TD On TD.ProductID = P.ProductID
 			INNER JOIN Stores.[Transaction] T ON T.TransactionID = TD.TransactionID
 		WHERE DAY(T.PurchasedOn) = DAY(@SelectedDate)
 			AND MONTH(T.PurchasedOn) = MONTH(@SelectedDate)
