@@ -1,4 +1,5 @@
-﻿CREATE OR ALTER PROCEDURE Stores.CreateEmployee
+﻿
+CREATE OR ALTER PROCEDURE Stores.CreateEmployee
    @PositionName NVARCHAR(32),
    @DepartmentName NVARCHAR(64),
    @HourlyPay FLOAT,

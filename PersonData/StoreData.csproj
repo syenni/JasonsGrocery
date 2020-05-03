@@ -50,6 +50,7 @@
     <Compile Include="DataDelegates\FetchEmployeeDataDelegate.cs" />
     <Compile Include="DataDelegates\GetWorkPositionDataDelegate.cs" />
     <Compile Include="DataDelegates\GetEmployeeDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrieveHoursWorkedDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveDailySalesDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveWorkPositionAvgSalaryDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrieveEmployeesInDepartmentDataDelegate.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="DataDelegates\RetrieveProductsForDepartmentDataDelegate.cs" />
     <Compile Include="DataDelegates\GetDepartmentDataDelegate.cs" />
     <Compile Include="IDepartmentRepository.cs" />
+    <Compile Include="ITimeEntryRepository.cs" />
     <Compile Include="IEmployeeRepository.cs" />
     <Compile Include="ISalesRepository.cs" />
     <Compile Include="IProductRepository.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Models\TransactionDetails.cs" />
     <Compile Include="Models\WorkPosition.cs" />
     <Compile Include="Models\WorkPositionType.cs" />
+    <Compile Include="SqlTimeEntryRepository.cs" />
     <Compile Include="SqlSalesRepository.cs" />
     <Compile Include="SqlWorkPositionRepository.cs" />
     <Compile Include="SqlEmployeeRepository.cs" />

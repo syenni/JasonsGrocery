@@ -20,6 +20,7 @@ namespace JasonsGrocery
         const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=JasonsGrocery;Integrated Security=SSPI;";
         private IEmployeeRepository repo;
         private IWorkPositionRepository repo2;
+        private ITimeEntryRepository repo3;
 
         public EmployeeQueryUI(ManagerBaseForm f)
         {
@@ -235,6 +236,23 @@ namespace JasonsGrocery
         private void BakeryRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             uxListOfEmployees.Enabled = true;
+        }
+
+        private void UxCalculateHoursWorked_Click(object sender, EventArgs e)
+        {
+            DateTime date = uxdateTimePicker.Value;
+            repo3 = new SqlTimeEntryRepository(connectionString);
+            var employees = repo3.RetrieveHoursWorked(date);
+
+            uxdataGridView.Columns.Clear();
+            uxdataGridView.Columns.Add("EmployeeName", "Employee Name");
+            uxdataGridView.Columns.Add("HoursWorked", "Hours Worked");
+
+            foreach (var employee in employees)
+            {
+                uxdataGridView.Rows.Add(employee.EmployeeName,
+                    employee.HoursWorked);
+            }
         }
     }
 }

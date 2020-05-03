@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using StoreData.Models;
+using System;
 
 namespace EmployeeData
 {
@@ -46,5 +47,7 @@ namespace EmployeeData
         /// The resulting instance of <see cref="Employee"/>.
         /// </returns>
       Employee CreateEmployee(string employeeName, string workPositionName, string departmentName, double hourlyPay);
+
+      
    }
 }

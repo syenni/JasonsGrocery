@@ -32,5 +32,7 @@ namespace StoreData.Models
             DepartmentName = departmentName;
             HourlyPay = hourlyPay;
         }
+
+
     }
 }

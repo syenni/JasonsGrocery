@@ -1,15 +1,17 @@
 ﻿--4R: list of employees who worked most hours in specific month
 CREATE OR ALTER PROCEDURE Stores.HoursWorked
-   @EmployeeID INT,
-   @Month DATETIME
+   @SelectedDate DATE
 AS
-SELECT E.EmployeeName, 
-	SUM(DATEDIFF(
-		HOUR,
-		TE.ClockIn,
-		TE.ClockOut
-	)) AS HoursWorked
-FROM Stores.Employee E
-	INNER JOIN Stores.TimeEntry TE ON TE.EmployeeID = E.EmployeeID
-WHERE MONTH(TE.ClockIn) = @Month AND E.EmployeeID = @EmployeeID
-GROUP BY E.EmployeeName;
+SELECT DISTINCT E.EmployeeName, 
+		SUM(DATEDIFF(
+				HOUR,
+				TE.ClockIn,
+				TE.ClockOut
+			)) 
+		OVER(
+			PARTITION BY TE.EmployeeID
+	)AS HoursWorked
+FROM Stores.TimeEntry TE
+	RIGHT JOIN Stores.Employee E ON E.EmployeeID = TE.EmployeeID
+WHERE YEAR(TE.ClockIn) = YEAR(@SelectedDate) AND MONTH(TE.ClockIn) = MONTH(@SelectedDate)
+GROUP BY E.EmployeeName, TE.EmployeeID, TE.ClockIn, TE.ClockOut;
