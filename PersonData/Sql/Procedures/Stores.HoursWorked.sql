@@ -14,4 +14,5 @@ SELECT DISTINCT E.EmployeeName,
 FROM Stores.TimeEntry TE
 	RIGHT JOIN Stores.Employee E ON E.EmployeeID = TE.EmployeeID
 WHERE YEAR(TE.ClockIn) = YEAR(@SelectedDate) AND MONTH(TE.ClockIn) = MONTH(@SelectedDate)
-GROUP BY E.EmployeeName, TE.EmployeeID, TE.ClockIn, TE.ClockOut;
+GROUP BY E.EmployeeName, TE.EmployeeID, TE.ClockIn, TE.ClockOut
+ORDER BY HoursWorked DESC;
