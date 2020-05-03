@@ -43,7 +43,10 @@
             this.uxdataGridView = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.uxdateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.uxSelectYearLabel = new System.Windows.Forms.Label();
+            this.uxSelectYearComboBox = new System.Windows.Forms.ComboBox();
+            this.uxSelectMonthComboBox = new System.Windows.Forms.ComboBox();
+            this.uxSelectMonthLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -54,10 +57,9 @@
             // BackButton
             // 
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(13, 464);
-            this.BackButton.Margin = new System.Windows.Forms.Padding(4);
+            this.BackButton.Location = new System.Drawing.Point(10, 377);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(100, 39);
+            this.BackButton.Size = new System.Drawing.Size(75, 32);
             this.BackButton.TabIndex = 12;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
@@ -67,10 +69,9 @@
             // 
             this.BakeryRadioButton.AutoSize = true;
             this.BakeryRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BakeryRadioButton.Location = new System.Drawing.Point(116, 65);
-            this.BakeryRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.BakeryRadioButton.Location = new System.Drawing.Point(87, 53);
             this.BakeryRadioButton.Name = "BakeryRadioButton";
-            this.BakeryRadioButton.Size = new System.Drawing.Size(82, 24);
+            this.BakeryRadioButton.Size = new System.Drawing.Size(69, 20);
             this.BakeryRadioButton.TabIndex = 8;
             this.BakeryRadioButton.TabStop = true;
             this.BakeryRadioButton.Text = "Bakery";
@@ -81,10 +82,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(9, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 25);
+            this.label1.Size = new System.Drawing.Size(166, 20);
             this.label1.TabIndex = 13;
             this.label1.Text = "Chooose Department:";
             // 
@@ -92,10 +92,9 @@
             // 
             this.ProduceRadioButton.AutoSize = true;
             this.ProduceRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProduceRadioButton.Location = new System.Drawing.Point(116, 32);
-            this.ProduceRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ProduceRadioButton.Location = new System.Drawing.Point(87, 26);
             this.ProduceRadioButton.Name = "ProduceRadioButton";
-            this.ProduceRadioButton.Size = new System.Drawing.Size(92, 24);
+            this.ProduceRadioButton.Size = new System.Drawing.Size(77, 20);
             this.ProduceRadioButton.TabIndex = 7;
             this.ProduceRadioButton.TabStop = true;
             this.ProduceRadioButton.Text = "Produce";
@@ -107,10 +106,9 @@
             this.DeliRadioButton.AutoSize = true;
             this.DeliRadioButton.BackColor = System.Drawing.SystemColors.Control;
             this.DeliRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeliRadioButton.Location = new System.Drawing.Point(24, 32);
-            this.DeliRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.DeliRadioButton.Location = new System.Drawing.Point(18, 26);
             this.DeliRadioButton.Name = "DeliRadioButton";
-            this.DeliRadioButton.Size = new System.Drawing.Size(60, 24);
+            this.DeliRadioButton.Size = new System.Drawing.Size(50, 20);
             this.DeliRadioButton.TabIndex = 6;
             this.DeliRadioButton.TabStop = true;
             this.DeliRadioButton.Text = "Deli";
@@ -122,10 +120,9 @@
             this.DairyRadioButton.AutoSize = true;
             this.DairyRadioButton.BackColor = System.Drawing.SystemColors.Control;
             this.DairyRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DairyRadioButton.Location = new System.Drawing.Point(24, 65);
-            this.DairyRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.DairyRadioButton.Location = new System.Drawing.Point(18, 53);
             this.DairyRadioButton.Name = "DairyRadioButton";
-            this.DairyRadioButton.Size = new System.Drawing.Size(70, 24);
+            this.DairyRadioButton.Size = new System.Drawing.Size(58, 20);
             this.DairyRadioButton.TabIndex = 9;
             this.DairyRadioButton.TabStop = true;
             this.DairyRadioButton.Text = "Dairy";
@@ -142,20 +139,18 @@
             this.panel1.Controls.Add(this.BakeryRadioButton);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(11, 8);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(8, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 448);
+            this.panel1.Size = new System.Drawing.Size(169, 364);
             this.panel1.TabIndex = 14;
             // 
             // uxListOfEmployees
             // 
             this.uxListOfEmployees.Enabled = false;
             this.uxListOfEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxListOfEmployees.Location = new System.Drawing.Point(24, 97);
-            this.uxListOfEmployees.Margin = new System.Windows.Forms.Padding(4);
+            this.uxListOfEmployees.Location = new System.Drawing.Point(18, 79);
             this.uxListOfEmployees.Name = "uxListOfEmployees";
-            this.uxListOfEmployees.Size = new System.Drawing.Size(173, 46);
+            this.uxListOfEmployees.Size = new System.Drawing.Size(130, 37);
             this.uxListOfEmployees.TabIndex = 0;
             this.uxListOfEmployees.Text = "List of Employees";
             this.uxListOfEmployees.UseVisualStyleBackColor = true;
@@ -164,21 +159,22 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.uxdateTimePicker);
+            this.panel2.Controls.Add(this.uxSelectMonthComboBox);
+            this.panel2.Controls.Add(this.uxSelectMonthLabel);
+            this.panel2.Controls.Add(this.uxSelectYearComboBox);
+            this.panel2.Controls.Add(this.uxSelectYearLabel);
             this.panel2.Controls.Add(this.uxCalculateHoursWorked);
-            this.panel2.Location = new System.Drawing.Point(-1, 238);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(-1, 193);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(225, 117);
+            this.panel2.Size = new System.Drawing.Size(169, 115);
             this.panel2.TabIndex = 17;
             // 
             // uxCalculateHoursWorked
             // 
             this.uxCalculateHoursWorked.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxCalculateHoursWorked.Location = new System.Drawing.Point(21, 50);
-            this.uxCalculateHoursWorked.Margin = new System.Windows.Forms.Padding(4);
+            this.uxCalculateHoursWorked.Location = new System.Drawing.Point(16, 61);
             this.uxCalculateHoursWorked.Name = "uxCalculateHoursWorked";
-            this.uxCalculateHoursWorked.Size = new System.Drawing.Size(173, 52);
+            this.uxCalculateHoursWorked.Size = new System.Drawing.Size(130, 42);
             this.uxCalculateHoursWorked.TabIndex = 1;
             this.uxCalculateHoursWorked.Text = "Calculate Hours Worked";
             this.uxCalculateHoursWorked.UseVisualStyleBackColor = true;
@@ -188,19 +184,17 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.uxAverageWorkPositionSalary);
-            this.panel3.Location = new System.Drawing.Point(-1, 151);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(-1, 123);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(225, 92);
+            this.panel3.Size = new System.Drawing.Size(169, 75);
             this.panel3.TabIndex = 18;
             // 
             // uxAverageWorkPositionSalary
             // 
             this.uxAverageWorkPositionSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxAverageWorkPositionSalary.Location = new System.Drawing.Point(23, 11);
-            this.uxAverageWorkPositionSalary.Margin = new System.Windows.Forms.Padding(4);
+            this.uxAverageWorkPositionSalary.Location = new System.Drawing.Point(17, 9);
             this.uxAverageWorkPositionSalary.Name = "uxAverageWorkPositionSalary";
-            this.uxAverageWorkPositionSalary.Size = new System.Drawing.Size(173, 64);
+            this.uxAverageWorkPositionSalary.Size = new System.Drawing.Size(130, 52);
             this.uxAverageWorkPositionSalary.TabIndex = 16;
             this.uxAverageWorkPositionSalary.Text = "Average Work Position Salary";
             this.uxAverageWorkPositionSalary.UseVisualStyleBackColor = true;
@@ -210,20 +204,18 @@
             // 
             this.uxdataGridView.AllowUserToDeleteRows = false;
             this.uxdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uxdataGridView.Location = new System.Drawing.Point(244, 4);
-            this.uxdataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.uxdataGridView.Location = new System.Drawing.Point(183, 3);
             this.uxdataGridView.Name = "uxdataGridView";
             this.uxdataGridView.RowHeadersWidth = 51;
-            this.uxdataGridView.Size = new System.Drawing.Size(515, 373);
+            this.uxdataGridView.Size = new System.Drawing.Size(386, 296);
             this.uxdataGridView.TabIndex = 15;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(21, 17);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(16, 10);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 52);
+            this.button1.Size = new System.Drawing.Size(130, 42);
             this.button1.TabIndex = 1;
             this.button1.Text = "Add New Employee";
             this.button1.UseVisualStyleBackColor = true;
@@ -233,37 +225,67 @@
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(11, 365);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(8, 310);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(225, 87);
+            this.panel4.Size = new System.Drawing.Size(169, 61);
             this.panel4.TabIndex = 18;
             // 
-            // uxdateTimePicker
+            // uxSelectYearLabel
             // 
-            this.uxdateTimePicker.Location = new System.Drawing.Point(-1, 8);
-            this.uxdateTimePicker.Margin = new System.Windows.Forms.Padding(4);
-            this.uxdateTimePicker.Name = "uxdateTimePicker";
-            this.uxdateTimePicker.Size = new System.Drawing.Size(225, 22);
-            this.uxdateTimePicker.TabIndex = 19;
+            this.uxSelectYearLabel.AutoSize = true;
+            this.uxSelectYearLabel.Location = new System.Drawing.Point(18, 11);
+            this.uxSelectYearLabel.Name = "uxSelectYearLabel";
+            this.uxSelectYearLabel.Size = new System.Drawing.Size(65, 13);
+            this.uxSelectYearLabel.TabIndex = 2;
+            this.uxSelectYearLabel.Text = "Select Year:";
+            // 
+            // uxSelectYearComboBox
+            // 
+            this.uxSelectYearComboBox.FormattingEnabled = true;
+            this.uxSelectYearComboBox.Items.AddRange(new object[] {
+            "2020"});
+            this.uxSelectYearComboBox.Location = new System.Drawing.Point(87, 8);
+            this.uxSelectYearComboBox.Name = "uxSelectYearComboBox";
+            this.uxSelectYearComboBox.Size = new System.Drawing.Size(69, 21);
+            this.uxSelectYearComboBox.TabIndex = 3;
+            // 
+            // uxSelectMonthComboBox
+            // 
+            this.uxSelectMonthComboBox.FormattingEnabled = true;
+            this.uxSelectMonthComboBox.Items.AddRange(new object[] {
+            "March",
+            "April"});
+            this.uxSelectMonthComboBox.Location = new System.Drawing.Point(87, 34);
+            this.uxSelectMonthComboBox.Name = "uxSelectMonthComboBox";
+            this.uxSelectMonthComboBox.Size = new System.Drawing.Size(69, 21);
+            this.uxSelectMonthComboBox.TabIndex = 5;
+            // 
+            // uxSelectMonthLabel
+            // 
+            this.uxSelectMonthLabel.AutoSize = true;
+            this.uxSelectMonthLabel.Location = new System.Drawing.Point(12, 37);
+            this.uxSelectMonthLabel.Name = "uxSelectMonthLabel";
+            this.uxSelectMonthLabel.Size = new System.Drawing.Size(73, 13);
+            this.uxSelectMonthLabel.TabIndex = 4;
+            this.uxSelectMonthLabel.Text = "Select Month:";
             // 
             // EmployeeQueryUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 516);
+            this.ClientSize = new System.Drawing.Size(581, 419);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.uxdataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BackButton);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EmployeeQueryUI";
             this.Text = "EmployeeQueryUI";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmployeeQueryUI_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uxdataGridView)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -289,6 +311,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DateTimePicker uxdateTimePicker;
+        private System.Windows.Forms.ComboBox uxSelectMonthComboBox;
+        private System.Windows.Forms.Label uxSelectMonthLabel;
+        private System.Windows.Forms.ComboBox uxSelectYearComboBox;
+        private System.Windows.Forms.Label uxSelectYearLabel;
     }
 }

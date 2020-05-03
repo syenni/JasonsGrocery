@@ -240,13 +240,23 @@ namespace JasonsGrocery
 
         private void UxCalculateHoursWorked_Click(object sender, EventArgs e)
         {
-            DateTime date = uxdateTimePicker.Value;
-            repo3 = new SqlTimeEntryRepository(connectionString);
-            var employees = repo3.RetrieveHoursWorked(date);
+            int month = 1;
+            switch (uxSelectMonthComboBox.SelectedItem.ToString()) {
+                case "March":
+                    month = 3;
+                    break;
+                case "April":
+                    month = 4;
+                    break;
 
+            }
+            DateTime date = new DateTime(Int32.Parse(uxSelectYearComboBox.SelectedItem.ToString()), month, 1);
+            repo3 = new SqlTimeEntryRepository(connectionString);
             uxdataGridView.Columns.Clear();
             uxdataGridView.Columns.Add("EmployeeName", "Employee Name");
             uxdataGridView.Columns.Add("HoursWorked", "Hours Worked");
+            
+            var employees = repo3.RetrieveHoursWorked(date);
 
             foreach (var employee in employees)
             {
