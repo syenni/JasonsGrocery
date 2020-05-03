@@ -17,6 +17,7 @@ namespace JasonsGrocery
         public PasscodeUI()
         {
             InitializeComponent();
+            MessageBox.Show("Passcode is: 1234");
         }
 
         private void LogInButton_Click(object sender, EventArgs e)
@@ -28,6 +29,7 @@ namespace JasonsGrocery
             }
             else
             {
+                MessageBox.Show("Incorrect Passcode.");
                 PasscodeIDTextbox.Clear();
             }
         }

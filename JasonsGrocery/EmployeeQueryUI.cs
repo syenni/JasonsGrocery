@@ -264,5 +264,15 @@ namespace JasonsGrocery
                     employee.HoursWorked);
             }
         }
+
+        private void uxSelectYearComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            uxSelectMonthComboBox.Enabled = true;
+        }
+
+        private void uxSelectMonthComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            uxCalculateHoursWorked.Enabled = true;
+        }
     }
 }

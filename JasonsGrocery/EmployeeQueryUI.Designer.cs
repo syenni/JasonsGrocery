@@ -171,6 +171,7 @@
             // 
             // uxCalculateHoursWorked
             // 
+            this.uxCalculateHoursWorked.Enabled = false;
             this.uxCalculateHoursWorked.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxCalculateHoursWorked.Location = new System.Drawing.Point(16, 61);
             this.uxCalculateHoursWorked.Name = "uxCalculateHoursWorked";
@@ -248,9 +249,11 @@
             this.uxSelectYearComboBox.Name = "uxSelectYearComboBox";
             this.uxSelectYearComboBox.Size = new System.Drawing.Size(69, 21);
             this.uxSelectYearComboBox.TabIndex = 3;
+            this.uxSelectYearComboBox.SelectedIndexChanged += new System.EventHandler(this.uxSelectYearComboBox_SelectedIndexChanged);
             // 
             // uxSelectMonthComboBox
             // 
+            this.uxSelectMonthComboBox.Enabled = false;
             this.uxSelectMonthComboBox.FormattingEnabled = true;
             this.uxSelectMonthComboBox.Items.AddRange(new object[] {
             "March",
@@ -259,6 +262,7 @@
             this.uxSelectMonthComboBox.Name = "uxSelectMonthComboBox";
             this.uxSelectMonthComboBox.Size = new System.Drawing.Size(69, 21);
             this.uxSelectMonthComboBox.TabIndex = 5;
+            this.uxSelectMonthComboBox.SelectedIndexChanged += new System.EventHandler(this.uxSelectMonthComboBox_SelectedIndexChanged);
             // 
             // uxSelectMonthLabel
             // 
