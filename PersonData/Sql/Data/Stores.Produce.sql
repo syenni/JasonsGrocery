@@ -38,7 +38,7 @@ FROM
 			(N'Bakery', 1.50, 45, N'Blueberry Muffins'),
 			(N'Bakery', 2.00, 40, N'Banana Nut Muffins'),
 			(N'Deli', 2.50, 25, N'California Roll'),
-			(N'Deli', 4.50, 15, N'Dynamite Roll')
+			(N'Deli', 4.50, 20, N'Dynamite Roll')
 	)Prod(DepartmentName, UnitPrice, StockQuantity, ProductName)
 	INNER JOIN Stores.Department D ON D.DepartmentName = Prod.DepartmentName
 	INNER JOIN Stores.Store S ON S.StoreID = D.StoreID;
@@ -50,7 +50,7 @@ FROM
 	(
 		VALUES
 			(N'Dairy', 2.50, 30, N'Cottage Cheese'),
-			(N'Dairy', 3, 40, N'Sour Cream'),
+			(N'Dairy', 3, 60, N'Sour Cream'),
 			(N'Dairy', 3.25, 20, N'Rocky Road Ice Cream'),
 			(N'Dairy', 1.50, 40, N'Vanilla Ice Cream'),
 			(N'Dairy', 1.75, 35, N'Chocolate Ice Cream'),
@@ -60,7 +60,7 @@ FROM
 			(N'Dairy', 1.75, 30, N'Orange Sherbet'),
 			(N'Produce', 2, 50, N'Strawberries'),
 			(N'Produce', 2.25, 50, N'Oranges'),
-			(N'Produce', 1.15, 25, N'Kiwis'),
+			(N'Produce', 1.15, 30, N'Kiwis'),
 			(N'Produce', 2.25, 35, N'Corn'),
 			(N'Produce', 2, 60, N'Broccoli'),
 			(N'Produce', 1.75, 40, N'Cucumbers'),

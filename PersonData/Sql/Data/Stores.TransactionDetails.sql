@@ -204,10 +204,13 @@ FROM
 --GROUP BY T.TransactionID, P.ProductID, P.StoreID, TD.ItemQuantity;
 
 --update products for each transaction
-UPDATE P 
+UPDATE P
 SET	
-	StockQuantity -= TD.ItemQuantity
-FROM Stores.Product P
-	RIGHT JOIN Stores.TransactionDetails TD ON TD.ProductID = P.ProductID
-	INNER JOIN Stores.[Transaction] T ON T.TransactionID = TD.TransactionID
+	StockQuantity -= 
+		(
+			SELECT IIF(SUM(TD2.ItemQuantity) IS NULL, 0, SUM(TD2.ItemQuantity))
+			FROM Stores.TransactionDetails TD2
+			WHERE P.ProductID = TD2.ProductID
+		)
+FROM Stores.Product P;
 /******************************************************************************/

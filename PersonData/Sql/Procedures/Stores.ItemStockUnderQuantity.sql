@@ -6,5 +6,5 @@ AS
 SELECT D.DepartmentName, P.ProductName, P.StockQuantity
 FROM Stores.Department D
 	INNER JOIN Stores.Product P ON P.DepartmentID = D.DepartmentID
-WHERE P.StockQuantity <= @Quantity
+WHERE P.StockQuantity < @Quantity
 ORDER BY P.StockQuantity ASC;
